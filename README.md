@@ -42,7 +42,7 @@
 
 <div align="center">
 
-  <img src="./assets/tech-stack-panel.svg" width="100%" alt="Tech stack console panel listing mobile, web, vision, and workflow tools" />
+  <img src="./assets/tech-stack-panel.gif" width="100%" alt="Tech stack console panel listing mobile, web, vision, and workflow tools" />
 
 </div>
 
