@@ -85,7 +85,7 @@ def draw_circuit(draw: ImageDraw.ImageDraw, x0: int, y0: int, x1: int, y1: int, 
             draw.ellipse((px - 3, py - 3, px + 3, py + 3), fill=(*color, alpha + 20))
 
 
-def draw_energy_ring(size, phase: float) -> Image.Image:
+def draw_energy_ring(size, outer_angle: float, inner_angle: float) -> Image.Image:
     scale = 2
     sw, sh = size[0] * scale, size[1] * scale
     layer = Image.new("RGBA", (sw, sh), (0, 0, 0, 0))
@@ -95,29 +95,36 @@ def draw_energy_ring(size, phase: float) -> Image.Image:
         cy: float,
         rx: float,
         ry: float,
-        start: float,
-        sweep: float,
+        rotation: float,
         wobble: float,
         twist: float,
-        samples: int = 460,
+        samples: int = 520,
     ) -> list[tuple[int, int]]:
         pts: list[tuple[int, int]] = []
-        for i in range(samples):
-            t = i / (samples - 1)
-            a = start + sweep * t + phase * 0.18
-            organic = math.sin(a * 2.25 + phase * 1.4) * wobble
-            organic += math.sin(a * 5.1 - phase * 0.7) * wobble * 0.28
+        for i in range(samples + 1):
+            t = i / samples
+            local = math.tau * t
+            a = local + rotation
+            organic = math.sin(local * 2.25) * wobble
+            organic += math.sin(local * 5.1 + 0.8) * wobble * 0.28
             x = cx + math.cos(a) * (rx + organic)
-            y = cy + math.sin(a + math.sin(a * 1.4) * 0.055) * (ry + math.cos(a * 2.7 + phase) * twist)
+            y = cy + math.sin(a + math.sin(local * 1.4) * 0.045) * (ry + math.cos(local * 2.7) * twist)
             pts.append((int(x * scale), int(y * scale)))
         return pts
 
-    def draw_ribbon(points: list[tuple[int, int]], color: tuple[int, int, int], delay: float) -> None:
+    def ring_color(t: float) -> tuple[int, int, int]:
+        # Color belongs to the rotating ring segment, so the cyan/magenta boundary travels with the geometry.
+        blend = 0.5 + 0.5 * math.sin(math.tau * (t - 0.06))
+        return tuple(int(CYAN[i] * (1 - blend) + MAGENTA[i] * blend) for i in range(3))
+
+    def draw_ribbon(points: list[tuple[int, int]], hot_offset: float, widths: tuple[int, int, int]) -> None:
         # Blurred continuous underpainting: no points, vertices, or node marks.
-        for width, alpha, blur in [(34, 38, 13), (20, 72, 7), (11, 116, 3)]:
+        for width, alpha, blur in [(widths[0], 42, 14), (widths[1], 76, 8), (widths[2], 122, 3)]:
             glow = Image.new("RGBA", (sw, sh), (0, 0, 0, 0))
             gd = ImageDraw.Draw(glow)
-            gd.line(points, fill=(*color, alpha), width=width * scale, joint="curve")
+            for i in range(len(points) - 1):
+                t = i / (len(points) - 2)
+                gd.line((points[i], points[i + 1]), fill=(*ring_color(t), alpha), width=width * scale)
             layer.alpha_composite(glow.filter(ImageFilter.GaussianBlur(blur * scale)))
 
         # Hot inner ribbon, drawn as densely sampled connected curve segments with tapering opacity.
@@ -125,27 +132,27 @@ def draw_energy_ring(size, phase: float) -> Image.Image:
         cd = ImageDraw.Draw(core)
         for i in range(len(points) - 1):
             t = i / (len(points) - 2)
-            fade = 0.24 + 0.76 * (0.5 + 0.5 * math.sin(t * math.tau * 1.35 + phase * 1.2 + delay))
-            taper = math.sin(math.pi * t) ** 0.28
-            width = int((3.2 + 5.8 * taper) * scale)
-            alpha = int(42 + 178 * fade * taper)
-            cd.line((points[i], points[i + 1]), fill=(*color, alpha), width=max(2, width))
+            hot = 0.32 + 0.68 * (0.5 + 0.5 * math.sin((t - hot_offset) * math.tau * 2.0))
+            width = int(widths[2] * 0.42 * scale)
+            alpha = int(72 + 168 * hot)
+            cd.line((points[i], points[i + 1]), fill=(*ring_color(t), alpha), width=max(2, width))
         layer.alpha_composite(core)
 
         highlight = Image.new("RGBA", (sw, sh), (0, 0, 0, 0))
         hd = ImageDraw.Draw(highlight)
-        hd.line(points, fill=(230, 255, 255, 96), width=2 * scale, joint="curve")
+        hd.line(points, fill=(230, 255, 255, 76), width=2 * scale, joint="curve")
         layer.alpha_composite(highlight.filter(ImageFilter.GaussianBlur(0.35 * scale)))
 
-    cyan_path = ribbon_points(590, 198, 348, 215, -2.38 + phase * 0.055, math.tau * 1.05, 22, 18)
-    magenta_path = ribbon_points(620, 205, 352, 207, 0.72 - phase * 0.05, math.tau * 1.02, 24, 20)
-    draw_ribbon(cyan_path, CYAN, 0.0)
-    draw_ribbon(magenta_path, MAGENTA, math.pi * 0.7)
+    # Outer ring: larger, thicker, counter-clockwise. Inner ring: tighter, thinner, clockwise and faster.
+    outer_path = ribbon_points(600, 204, 372, 232, outer_angle, 18, 16)
+    inner_path = ribbon_points(600, 204, 314, 185, inner_angle + 0.7, 10, 9)
+    draw_ribbon(outer_path, (outer_angle % math.tau) / math.tau, (42, 27, 14))
+    draw_ribbon(inner_path, (inner_angle % math.tau) / math.tau, (22, 14, 8))
 
     return layer.resize(size, Image.Resampling.LANCZOS)
 
 
-def draw_hero_frame(phase: float) -> Image.Image:
+def draw_hero_frame(phase: float, outer_angle: float | None = None, inner_angle: float | None = None) -> Image.Image:
     img = Image.new("RGBA", (W, H), (*BG, 255))
     draw = ImageDraw.Draw(img)
 
@@ -180,7 +187,11 @@ def draw_hero_frame(phase: float) -> Image.Image:
     draw_circuit(cd, 105, 105, 505, 330, CYAN, 70)
     draw_circuit(cd, 700, 105, 1095, 330, MAGENTA, 68)
     img.alpha_composite(circuit)
-    img.alpha_composite(draw_energy_ring((W, H), phase))
+    if outer_angle is None:
+        outer_angle = phase
+    if inner_angle is None:
+        inner_angle = phase * -2
+    img.alpha_composite(draw_energy_ring((W, H), outer_angle, inner_angle))
 
     # terminal controls
     for i, c in enumerate([CYAN, MAGENTA, (120, 130, 145)]):
@@ -228,8 +239,16 @@ def draw_hero_frame(phase: float) -> Image.Image:
 
 
 def make_hero_gif():
-    frames = [draw_hero_frame(i * math.tau / 24).convert("RGBA").crop((0, 0, 1200, 420)).convert("P", palette=Image.ADAPTIVE, colors=192) for i in range(24)]
-    frames[0].save(ASSETS / "hero-banner.gif", save_all=True, append_images=frames[1:], duration=90, loop=0, optimize=True)
+    total = 60
+    frames = []
+    for i in range(total):
+        t = i / total
+        # Static phase remains fixed; only the two ring layers rotate.
+        outer = -math.tau * t
+        inner = math.tau * 2 * t
+        frame = draw_hero_frame(0, outer, inner).convert("RGBA").crop((0, 0, 1200, 420))
+        frames.append(frame.convert("P", palette=Image.ADAPTIVE, colors=192))
+    frames[0].save(ASSETS / "hero-banner.gif", save_all=True, append_images=frames[1:], duration=300, loop=0, optimize=True)
 
 
 def draw_terminal_frame(chars: int, blink: bool) -> Image.Image:
