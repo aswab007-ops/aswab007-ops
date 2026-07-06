@@ -1,126 +1,139 @@
-<svg width="1200" height="640" viewBox="0 0 1200 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1200" height="520" viewBox="0 0 1200 520" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-label="Muhammad Aswab Khalil cyberpunk portfolio banner">
   <defs>
-    <linearGradient id="heroStroke" x1="74" y1="70" x2="1126" y2="70" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#22F7FF"/>
-      <stop offset=".48" stop-color="#8AB8FF"/>
-      <stop offset="1" stop-color="#FF4FE3"/>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22F7FF"/>
+      <stop offset="50%" stop-color="#B084F5"/>
+      <stop offset="100%" stop-color="#FF4FE3"/>
+      <animate attributeName="x1" values="0%;100%;0%" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="100%;200%;100%" dur="8s" repeatCount="indefinite"/>
     </linearGradient>
-    <linearGradient id="titleGrad" x1="230" y1="184" x2="970" y2="184" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#2EF4FF"/>
-      <stop offset=".45" stop-color="#9CB9FF"/>
-      <stop offset="1" stop-color="#FF4AD8"/>
-    </linearGradient>
-    <radialGradient id="cyanGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(175 168) rotate(30) scale(470 250)">
-      <stop stop-color="#20F4FF" stop-opacity=".75"/>
-      <stop offset=".48" stop-color="#20F4FF" stop-opacity=".18"/>
-      <stop offset="1" stop-color="#020608" stop-opacity="0"/>
+    <radialGradient id="bgGlowCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#12E8F5" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#12E8F5" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="pinkGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1010 190) rotate(150) scale(470 260)">
-      <stop stop-color="#FF4CE2" stop-opacity=".72"/>
-      <stop offset=".52" stop-color="#FF4CE2" stop-opacity=".18"/>
-      <stop offset="1" stop-color="#020608" stop-opacity="0"/>
+    <radialGradient id="bgGlowPink" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF4FE3" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#FF4FE3" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="benchGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(604 560) scale(560 120)">
-      <stop stop-color="#37F6FF" stop-opacity=".24"/>
-      <stop offset=".44" stop-color="#D946EF" stop-opacity=".14"/>
-      <stop offset="1" stop-color="#020608" stop-opacity="0"/>
-    </radialGradient>
-    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
-      <feGaussianBlur stdDeviation="6" result="blur"/>
-      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.12 0 0 0 0 0.94 0 0 0 0 1 0 0 0 .8 0"/>
-      <feBlend in2="SourceGraphic" mode="screen"/>
+    <filter id="softBlur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="10"/>
     </filter>
-    <filter id="pinkSoftGlow" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
-      <feGaussianBlur stdDeviation="7" result="blur"/>
-      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 1 0 0 0 0 .2 0 0 0 0 .85 0 0 0 .76 0"/>
-      <feBlend in2="SourceGraphic" mode="screen"/>
+    <filter id="textGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
     </filter>
-    <pattern id="binary" width="48" height="52" patternUnits="userSpaceOnUse">
-      <text x="4" y="13" fill="#36F4FF" fill-opacity=".16" font-family="JetBrains Mono,Consolas,monospace" font-size="12">1010</text>
-      <text x="12" y="36" fill="#FF4FE3" fill-opacity=".10" font-family="JetBrains Mono,Consolas,monospace" font-size="12">011</text>
+    <pattern id="circuit" width="120" height="120" patternUnits="userSpaceOnUse">
+      <path d="M0 60 H40 V20 H90" stroke="#1FB9D9" stroke-width="1" fill="none" opacity="0.35"/>
+      <path d="M60 0 V40 H110 V90" stroke="#B45FE0" stroke-width="1" fill="none" opacity="0.25"/>
+      <circle cx="40" cy="20" r="2.2" fill="#22F7FF" opacity="0.5"/>
+      <circle cx="110" cy="90" r="2.2" fill="#FF4FE3" opacity="0.4"/>
     </pattern>
-    <pattern id="scan" width="8" height="8" patternUnits="userSpaceOnUse">
-      <path d="M0 0H8" stroke="#DFFBFF" stroke-opacity=".035"/>
-    </pattern>
+    <clipPath id="rounded">
+      <rect x="0" y="0" width="1200" height="520" rx="26"/>
+    </clipPath>
   </defs>
 
-  <rect width="1200" height="640" rx="0" fill="#020608"/>
-  <rect width="1200" height="640" fill="url(#binary)">
-    <animateTransform attributeName="patternTransform" type="translate" values="0 0; 0 52" dur="10s" repeatCount="indefinite"/>
-  </rect>
-  <rect width="1200" height="640" fill="url(#cyanGlow)">
-    <animate attributeName="opacity" values=".72;.36;.88;.55;.72" dur="9s" repeatCount="indefinite"/>
-  </rect>
-  <rect width="1200" height="640" fill="url(#pinkGlow)">
-    <animate attributeName="opacity" values=".34;.82;.42;.68;.34" dur="10s" repeatCount="indefinite"/>
-  </rect>
-  <rect width="1200" height="640" fill="url(#benchGlow)"/>
-  <rect width="1200" height="640" fill="url(#scan)"/>
+  <g clip-path="url(#rounded)">
+    <rect width="1200" height="520" fill="#020608"/>
+    <rect width="1200" height="520" fill="url(#circuit)"/>
 
-  <g opacity=".35">
-    <path d="M118 224H236L282 178H404" stroke="#40F8FF" stroke-opacity=".42"/>
-    <path d="M786 170H920L958 208H1082" stroke="#FF59DD" stroke-opacity=".34"/>
-    <path d="M136 267H286L330 309H430" stroke="#40F8FF" stroke-opacity=".27"/>
-    <path d="M770 260H890L930 298H1066" stroke="#FF59DD" stroke-opacity=".26"/>
-    <circle cx="236" cy="224" r="4" fill="#3DF7FF"/>
-    <circle cx="920" cy="170" r="4" fill="#FF57DD"/>
-    <circle cx="286" cy="267" r="3" fill="#3DF7FF"/>
-    <circle cx="890" cy="260" r="3" fill="#FF57DD"/>
+    <!-- roaming ambient glows -->
+    <circle r="260" fill="url(#bgGlowCyan)">
+      <animate attributeName="cx" values="120;950;300;120" dur="18s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="80;300;450;80" dur="18s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="240" fill="url(#bgGlowPink)">
+      <animate attributeName="cx" values="1050;220;800;1050" dur="21s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="420;140;60;420" dur="21s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- scattered binary specks -->
+    <g font-family="JetBrains Mono, monospace" font-size="11" fill="#2FD9E8" opacity="0.28">
+      <text x="30" y="40">0 1 1 0</text>
+      <text x="1060" y="35">1 0 0 1</text>
+      <text x="1090" y="470">0 1 0 1</text>
+      <text x="24" y="500">1 1 0 0</text>
+      <text x="560" y="24">01001101</text>
+      <text x="960" y="500">10110100</text>
+    </g>
+
+    <!-- outer + inner neon frames -->
+    <rect x="20" y="20" width="1160" height="480" rx="26" fill="none" stroke="#FF4FE3" stroke-width="2.5" filter="url(#softBlur)" opacity="0.55">
+      <animate attributeName="stroke" values="#FF4FE3;#22F7FF;#FF4FE3" dur="7s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="20" y="20" width="1160" height="480" rx="26" fill="none" stroke="#FF7FEE" stroke-width="1.4">
+      <animate attributeName="stroke" values="#FF7FEE;#7FF3FF;#FF7FEE" dur="7s" repeatCount="indefinite"/>
+    </rect>
+
+    <rect x="42" y="42" width="1116" height="436" rx="20" fill="none" stroke="#22F7FF" stroke-width="2.2" filter="url(#softBlur)" opacity="0.5">
+      <animate attributeName="stroke" values="#22F7FF;#B084F5;#22F7FF" dur="9s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="42" y="42" width="1116" height="436" rx="20" fill="none" stroke="#7FF3FF" stroke-width="1.2">
+      <animate attributeName="stroke" values="#7FF3FF;#E3B9FF;#7FF3FF" dur="9s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- corner accent squares -->
+    <g>
+      <rect x="70" y="72" width="20" height="20" rx="5" fill="#0B1020" stroke="#22F7FF" stroke-width="1.4"/>
+      <rect x="98" y="72" width="20" height="20" rx="5" fill="#0B1020" stroke="#FF4FE3" stroke-width="1.4"/>
+      <rect x="126" y="72" width="20" height="20" rx="5" fill="#0B1020" stroke="#B084F5" stroke-width="1.4"/>
+      <circle cx="80" cy="82" r="2.6" fill="#22F7FF"><animate attributeName="opacity" values="1;0.3;1" dur="2.4s" repeatCount="indefinite"/></circle>
+      <circle cx="108" cy="82" r="2.6" fill="#FF4FE3"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.4s" repeatCount="indefinite"/></circle>
+      <circle cx="136" cy="82" r="2.6" fill="#B084F5"><animate attributeName="opacity" values="1;0.4;1" dur="3s" repeatCount="indefinite"/></circle>
+    </g>
+
+    <!-- title -->
+    <text x="600" y="185" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="54" font-weight="800" fill="url(#titleGrad)" filter="url(#textGlow)">Muhammad Aswab Khalil</text>
+
+    <!-- subtitle -->
+    <text x="600" y="232" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="19" fill="#DCEFFF" opacity="0.92">Software Engineer  |  Flutter  |  MERN  |  Computer Vision + AI</text>
+
+    <!-- typewriter line -->
+    <g>
+      <clipPath id="typeClip">
+        <rect x="0" y="0" width="0" height="40">
+          <animate attributeName="width" values="0;760;760;0" keyTimes="0;0.45;0.9;1" dur="6s" repeatCount="indefinite"/>
+        </rect>
+      </clipPath>
+      <g clip-path="url(#typeClip)" transform="translate(220,258)">
+        <text x="0" y="20" font-family="JetBrains Mono, Consolas, monospace" font-size="17" fill="#9DFBFF">building production-ready mobile, web, and intelligent systems</text>
+      </g>
+      <rect x="220" y="248" width="2.4" height="20" fill="#9DFBFF">
+        <animate attributeName="x" values="220;980;220" keyTimes="0;0.45;1" dur="6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0;1" dur="0.7s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- location pill -->
+    <rect x="430" y="300" width="340" height="42" rx="21" fill="#0B1020" stroke="#B084F5" stroke-width="1.4">
+      <animate attributeName="stroke" values="#B084F5;#22F7FF;#FF4FE3;#B084F5" dur="6s" repeatCount="indefinite"/>
+    </rect>
+    <text x="600" y="326" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14.5" fill="#EAFBFF" letter-spacing="0.5">aswab007-ops :: Lahore, Pakistan</text>
+
+    <!-- mission line -->
+    <text x="80" y="392" font-family="JetBrains Mono, monospace" font-size="14" fill="#2FD9E8" opacity="0.9">&gt; Active Mission Profile:</text>
+    <text x="80" y="424" font-family="JetBrains Mono, monospace" font-size="27" font-weight="700" fill="#EAFBFF">I turn pixels, APIs, and models into real products<tspan fill="#22F7FF">_</tspan>
+      <animate attributeName="opacity" values="1;1;0;1" dur="1.1s" repeatCount="indefinite"/>
+    </text>
+
+    <!-- status chips -->
+    <g font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">
+      <rect x="80" y="452" width="168" height="32" rx="7" fill="#0B1020" stroke="#3A4A5E"/>
+      <text x="96" y="473" fill="#9FB3C8">PROFILE VIEWS</text>
+
+      <rect x="256" y="452" width="118" height="32" rx="7" fill="#0B1020" stroke="#22F7FF"/>
+      <text x="272" y="473" fill="#22F7FF">MODE: BUILDER</text>
+
+      <rect x="382" y="452" width="220" height="32" rx="7" fill="#0B1020" stroke="#FF4FE3"/>
+      <text x="398" y="473" fill="#FF9EED">BASE: LAHORE, PAKISTAN</text>
+    </g>
+
+    <!-- bottom pulse dots -->
+    <circle cx="580" cy="500" r="4" fill="#22F7FF"><animate attributeName="opacity" values="1;0.25;1" dur="1.8s" repeatCount="indefinite"/></circle>
+    <circle cx="600" cy="500" r="4" fill="#FF4FE3"><animate attributeName="opacity" values="0.3;1;0.3" dur="1.8s" begin="0.3s" repeatCount="indefinite"/></circle>
+    <circle cx="620" cy="500" r="4" fill="#7FA8FF"><animate attributeName="opacity" values="1;0.3;1" dur="1.8s" begin="0.6s" repeatCount="indefinite"/></circle>
   </g>
-
-  <g filter="url(#softGlow)">
-    <rect x="58" y="54" width="1084" height="342" rx="30" fill="#071116" fill-opacity=".64" stroke="url(#heroStroke)" stroke-width="4"/>
-    <rect x="74" y="70" width="1052" height="310" rx="24" fill="#0B141A" fill-opacity=".38" stroke="url(#heroStroke)" stroke-opacity=".65" stroke-width="2"/>
-    <rect x="88" y="84" width="1024" height="282" rx="18" fill="#0B1117" fill-opacity=".34" stroke="url(#heroStroke)" stroke-opacity=".26"/>
-  </g>
-
-  <g>
-    <rect x="112" y="104" width="18" height="18" rx="3" fill="#0B2025" stroke="#33F4FF" stroke-opacity=".45"/>
-    <rect x="141" y="104" width="18" height="18" rx="3" fill="#201128" stroke="#FF54DB" stroke-opacity=".45"/>
-    <rect x="170" y="104" width="18" height="18" rx="3" fill="#192018" stroke="#B7F564" stroke-opacity=".35"/>
-    <circle cx="121" cy="113" r="3" fill="#31F5FF"/>
-    <circle cx="150" cy="113" r="3" fill="#FF55DB"/>
-    <circle cx="179" cy="113" r="3" fill="#B7F564"/>
-  </g>
-
-  <text x="600" y="205" text-anchor="middle" fill="url(#titleGrad)" stroke="#DFFBFF" stroke-opacity=".18" stroke-width="1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="58" font-weight="900" letter-spacing=".5" filter="url(#pinkSoftGlow)">Muhammad Aswab Khalil</text>
-  <text x="600" y="252" text-anchor="middle" fill="#E7F6FF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700">Software Engineer | Flutter | MERN | Computer Vision + AI</text>
-  <text x="600" y="306" text-anchor="middle" fill="#9DFBFF" font-family="JetBrains Mono,Consolas,monospace" font-size="17" font-weight="700">building production-ready mobile, web, and intelligent systems</text>
-
-  <g filter="url(#softGlow)">
-    <rect x="392" y="342" width="416" height="44" rx="22" fill="#061116" fill-opacity=".8" stroke="url(#heroStroke)" stroke-width="2"/>
-    <rect x="398" y="348" width="404" height="32" rx="16" fill="#74F9FF" fill-opacity=".08"/>
-    <text x="600" y="370" text-anchor="middle" fill="#F8FAFC" font-family="JetBrains Mono,Consolas,monospace" font-size="14" font-weight="800">aswab007-ops :: Lahore, Pakistan</text>
-  </g>
-
-  <text x="128" y="442" fill="#BFFBFF" font-family="JetBrains Mono,Consolas,monospace" font-size="18">&gt; Active Mission Profile:</text>
-  <text x="128" y="482" fill="#E6F5FF" font-family="JetBrains Mono,Consolas,monospace" font-size="28" font-weight="900">I turn pixels, APIs, and models into real products</text>
-  <rect x="884" y="455" width="18" height="35" fill="#28F5FF">
-    <animate attributeName="opacity" values="1;.15;1" dur="1s" repeatCount="indefinite"/>
-  </rect>
-
-  <g filter="url(#softGlow)">
-    <rect x="128" y="514" width="150" height="40" fill="#071116" fill-opacity=".72" stroke="#DFFBFF" stroke-opacity=".45"/>
-    <text x="203" y="540" text-anchor="middle" fill="#F8FAFC" font-family="JetBrains Mono,Consolas,monospace" font-size="15" font-weight="900">PROFILE VIEWS</text>
-    <rect x="288" y="514" width="44" height="40" fill="#092229" fill-opacity=".76" stroke="#38F6FF" stroke-opacity=".7"/>
-    <text x="310" y="540" text-anchor="middle" fill="#9DFBFF" font-family="JetBrains Mono,Consolas,monospace" font-size="15" font-weight="900">∞</text>
-    <rect x="360" y="514" width="80" height="40" fill="#071116" fill-opacity=".72" stroke="#38F6FF" stroke-opacity=".5"/>
-    <text x="400" y="540" text-anchor="middle" fill="#9DFBFF" font-family="JetBrains Mono,Consolas,monospace" font-size="15" font-weight="900">MODE:</text>
-    <rect x="448" y="514" width="130" height="40" fill="#071116" fill-opacity=".72" stroke="#DFFBFF" stroke-opacity=".45"/>
-    <text x="513" y="540" text-anchor="middle" fill="#F8FAFC" font-family="JetBrains Mono,Consolas,monospace" font-size="15" font-weight="900">BUILDER</text>
-    <rect x="590" y="514" width="82" height="40" fill="#071116" fill-opacity=".72" stroke="#FF57DD" stroke-opacity=".5"/>
-    <text x="631" y="540" text-anchor="middle" fill="#FFB8F1" font-family="JetBrains Mono,Consolas,monospace" font-size="15" font-weight="900">BASE:</text>
-    <rect x="680" y="514" width="214" height="40" fill="#071116" fill-opacity=".72" stroke="#DFFBFF" stroke-opacity=".45"/>
-    <text x="787" y="540" text-anchor="middle" fill="#F8FAFC" font-family="JetBrains Mono,Consolas,monospace" font-size="15" font-weight="900">LAHORE, PAKISTAN</text>
-  </g>
-
-  <circle cx="552" cy="578" r="7" fill="#24F6FF" filter="url(#softGlow)">
-    <animate attributeName="opacity" values=".45;1;.45" dur="2.8s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="600" cy="578" r="7" fill="#FF4DDB" filter="url(#pinkSoftGlow)">
-    <animate attributeName="opacity" values="1;.4;1" dur="3.2s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="648" cy="578" r="7" fill="#78F6FF" opacity=".55">
-    <animate attributeName="opacity" values=".25;.8;.25" dur="3.7s" repeatCount="indefinite"/>
-  </circle>
 </svg>

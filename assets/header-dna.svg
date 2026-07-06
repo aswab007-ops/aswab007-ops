@@ -1,0 +1,20 @@
+<svg width="1200" height="88" viewBox="0 0 1200 88" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Build DNA section header">
+  <defs>
+    <linearGradient id="g_dna" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22F7FF"/>
+      <stop offset="55%" stop-color="#B084F5"/>
+      <stop offset="100%" stop-color="#FF4FE3"/>
+      <animate attributeName="x1" values="0%;40%;0%" dur="9s" repeatCount="indefinite"/>
+    </linearGradient>
+    <filter id="glow_dna" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect x="0" y="16" width="6" height="40" rx="3" fill="url(#g_dna)">
+    <animate attributeName="height" values="40;54;40" dur="3.2s" repeatCount="indefinite"/>
+  </rect>
+  <text x="26" y="34" font-family="JetBrains Mono, monospace" font-size="13" fill="#2FD9E8" opacity="0.85">// core.values</text>
+  <text x="26" y="66" font-family="JetBrains Mono, Consolas, monospace" font-size="30" font-weight="800" fill="url(#g_dna)" filter="url(#glow_dna)">Build DNA</text>
+  <rect x="0" y="84" width="1200" height="1.2" fill="#17222c"/>
+</svg>

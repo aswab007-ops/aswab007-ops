@@ -1,37 +1,67 @@
-<svg width="1100" height="250" viewBox="0 0 1100 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1160" height="300" viewBox="0 0 1160 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Boot console showing profile systems loaded">
   <defs>
-    <linearGradient id="panelStroke" x1="40" y1="20" x2="1060" y2="230" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#22F7FF"/>
-      <stop offset=".55" stop-color="#536DFF"/>
-      <stop offset="1" stop-color="#FF4FE3"/>
-    </linearGradient>
-    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(550 123) scale(520 130)">
-      <stop stop-color="#22F7FF" stop-opacity=".18"/>
-      <stop offset=".58" stop-color="#FF4FE3" stop-opacity=".09"/>
-      <stop offset="1" stop-color="#020608" stop-opacity="0"/>
+    <radialGradient id="screenGlow" cx="50%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#0B2530" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#020608" stop-opacity="1"/>
     </radialGradient>
-    <filter id="blurGlow" x="-20%" y="-35%" width="140%" height="170%">
-      <feGaussianBlur stdDeviation="5"/>
-      <feBlend in2="SourceGraphic" mode="screen"/>
+    <linearGradient id="bezelEdge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22F7FF"/>
+      <stop offset="50%" stop-color="#B084F5"/>
+      <stop offset="100%" stop-color="#FF4FE3"/>
+      <animate attributeName="x1" values="0%;100%;0%" dur="10s" repeatCount="indefinite"/>
+    </linearGradient>
+    <filter id="glowSoft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3"/>
     </filter>
-    <pattern id="micro" width="42" height="28" patternUnits="userSpaceOnUse">
-      <text x="2" y="12" fill="#6BF7FF" fill-opacity=".08" font-family="JetBrains Mono,Consolas,monospace" font-size="8">01001</text>
-      <path d="M0 27H42" stroke="#E9FFFF" stroke-opacity=".025"/>
-    </pattern>
+    <clipPath id="panelClip"><rect x="0" y="0" width="1160" height="300" rx="22"/></clipPath>
   </defs>
-  <rect width="1100" height="250" rx="28" fill="#020608"/>
-  <rect width="1100" height="250" rx="28" fill="url(#micro)"/>
-  <rect width="1100" height="250" rx="28" fill="url(#glow)"/>
-  <rect x="18" y="18" width="1064" height="214" rx="22" fill="#071116" fill-opacity=".76" stroke="url(#panelStroke)" stroke-width="2" filter="url(#blurGlow)"/>
-  <rect x="42" y="44" width="1016" height="162" rx="16" fill="#031012" fill-opacity=".7" stroke="#DFFBFF" stroke-opacity=".12"/>
-  <text x="550" y="72" text-anchor="middle" fill="#DFFBFF" font-family="JetBrains Mono,Consolas,monospace" font-size="16">⚙ booting profile...</text>
-  <text x="330" y="108" fill="#EAFBFF" font-family="JetBrains Mono,Consolas,monospace" font-size="16">▣ loading mobile systems.............</text>
-  <text x="716" y="108" fill="#9DFFCB" font-family="JetBrains Mono,Consolas,monospace" font-size="16" font-weight="800">done</text>
-  <text x="330" y="134" fill="#EAFBFF" font-family="JetBrains Mono,Consolas,monospace" font-size="16">▤ loading full-stack architecture....</text>
-  <text x="716" y="134" fill="#9DFFCB" font-family="JetBrains Mono,Consolas,monospace" font-size="16" font-weight="800">done</text>
-  <text x="330" y="160" fill="#EAFBFF" font-family="JetBrains Mono,Consolas,monospace" font-size="16">◉ loading computer vision models.....</text>
-  <text x="716" y="160" fill="#9DFFCB" font-family="JetBrains Mono,Consolas,monospace" font-size="16" font-weight="800">done</text>
-  <text x="330" y="186" fill="#EAFBFF" font-family="JetBrains Mono,Consolas,monospace" font-size="16">◆ loading product instincts..........</text>
-  <text x="716" y="186" fill="#9DFFCB" font-family="JetBrains Mono,Consolas,monospace" font-size="16" font-weight="800">done</text>
-  <text x="260" y="218" fill="#C8FEFF" font-family="JetBrains Mono,Consolas,monospace" font-size="15">✳ status: building things that look good, work hard, and survive real users</text>
+
+  <g clip-path="url(#panelClip)">
+    <rect width="1160" height="300" fill="#04070a"/>
+    <rect x="3" y="3" width="1154" height="294" rx="20" fill="none" stroke="url(#bezelEdge)" stroke-width="2.5"/>
+
+    <!-- screen -->
+    <rect x="26" y="26" width="1108" height="248" rx="12" fill="url(#screenGlow)" stroke="#123240" stroke-width="1.5"/>
+
+    <!-- scanline shimmer -->
+    <rect x="26" y="26" width="1108" height="6" fill="#22F7FF" opacity="0.06">
+      <animate attributeName="y" values="26;268;26" dur="5s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- top bar dots -->
+    <circle cx="52" cy="48" r="5" fill="#FF4FE3" opacity="0.8"/>
+    <circle cx="70" cy="48" r="5" fill="#F5D742" opacity="0.8"/>
+    <circle cx="88" cy="48" r="5" fill="#22F7FF" opacity="0.8"/>
+    <text x="1110" y="52" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="11" fill="#3FB6C9" opacity="0.6">profile.sh</text>
+
+    <g font-family="JetBrains Mono, Consolas, monospace" font-size="15.5" fill="#BFEFFF">
+      <text x="580" y="90" text-anchor="middle" fill="#9DFBFF">&#10022; booting profile...</text>
+
+      <text x="580" y="122" text-anchor="middle">
+        <tspan fill="#BFEFFF">&#128241; loading mobile systems</tspan><tspan fill="#4B6472">............</tspan><tspan fill="#3CE86B" font-weight="700"> done</tspan>
+      </text>
+      <text x="580" y="150" text-anchor="middle">
+        <tspan fill="#BFEFFF">&#9776; loading full-stack architecture</tspan><tspan fill="#4B6472">....</tspan><tspan fill="#3CE86B" font-weight="700"> done</tspan>
+      </text>
+      <text x="580" y="178" text-anchor="middle">
+        <tspan fill="#BFEFFF">&#128065; loading computer vision models</tspan><tspan fill="#4B6472">....</tspan><tspan fill="#3CE86B" font-weight="700"> done</tspan>
+      </text>
+      <text x="580" y="206" text-anchor="middle">
+        <tspan fill="#BFEFFF">&#128161; loading product instincts</tspan><tspan fill="#4B6472">..........</tspan><tspan fill="#3CE86B" font-weight="700"> done</tspan>
+      </text>
+
+      <text x="580" y="238" text-anchor="middle" fill="#FF9EED">&#10052; status: building things that look good, work hard, and survive real users</text>
+
+      <text x="60" y="264" fill="#22F7FF">&gt; <tspan fill="#EAFBFF">_</tspan>
+        <animate attributeName="opacity" values="1;1;0;0;1" dur="1.2s" repeatCount="indefinite"/>
+      </text>
+    </g>
+
+    <!-- side connector glyphs -->
+    <g stroke="#3A4A5E" fill="none" opacity="0.7">
+      <rect x="1122" y="140" width="18" height="30" rx="4"/>
+      <circle cx="1131" cy="150" r="2" fill="#3A4A5E"/>
+      <circle cx="1131" cy="160" r="2" fill="#3A4A5E"/>
+    </g>
+  </g>
 </svg>

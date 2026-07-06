@@ -1,27 +1,21 @@
-<svg width="1200" height="54" viewBox="0 0 1200 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1200" height="26" viewBox="0 0 1200 26" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Neon divider">
   <defs>
-    <linearGradient id="line" x1="128" y1="27" x2="1072" y2="27" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#05080B" stop-opacity="0"/>
-      <stop offset=".16" stop-color="#22F7FF"/>
-      <stop offset=".5" stop-color="#8A8CFF"/>
-      <stop offset=".84" stop-color="#FF4FE3"/>
-      <stop offset="1" stop-color="#05080B" stop-opacity="0"/>
+    <linearGradient id="flowLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22F7FF" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#22F7FF" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#B084F5" stop-opacity="0.9"/>
+      <stop offset="80%" stop-color="#FF4FE3" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FF4FE3" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-600 0; 600 0; -600 0" dur="6s" repeatCount="indefinite"/>
     </linearGradient>
-    <filter id="glow" x="0" y="0" width="1200" height="54" color-interpolation-filters="sRGB">
-      <feGaussianBlur stdDeviation="4"/>
-      <feBlend in2="SourceGraphic" mode="screen"/>
+    <filter id="lineGlow" x="-20%" y="-200%" width="140%" height="500%">
+      <feGaussianBlur stdDeviation="2.2"/>
     </filter>
   </defs>
-  <path d="M128 27H1072" stroke="url(#line)" stroke-width="2" filter="url(#glow)"/>
-  <path d="M348 18L360 27L348 36" stroke="#22F7FF" stroke-opacity=".5"/>
-  <path d="M852 18L840 27L852 36" stroke="#FF4FE3" stroke-opacity=".5"/>
-  <circle cx="552" cy="27" r="6" fill="#22F7FF">
-    <animate attributeName="opacity" values=".35;1;.35" dur="2.4s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="600" cy="27" r="6" fill="#FF4FE3">
-    <animate attributeName="opacity" values="1;.35;1" dur="2.8s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="648" cy="27" r="6" fill="#7DEBFF">
-    <animate attributeName="opacity" values=".45;.9;.45" dur="3.1s" repeatCount="indefinite"/>
+  <rect x="0" y="12" width="1200" height="1.4" fill="#1B2733"/>
+  <rect x="0" y="11.5" width="1200" height="2.5" fill="url(#flowLine)" filter="url(#lineGlow)"/>
+  <circle cy="13" r="3.4" fill="#EAFBFF">
+    <animateMotion path="M0,0 H1200 H0" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" dur="6s" repeatCount="indefinite"/>
   </circle>
 </svg>

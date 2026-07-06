@@ -3,7 +3,7 @@
   <img src="./assets/neon-hero.svg" width="100%" alt="Muhammad Aswab Khalil cyberpunk portfolio banner" />
 
   <a href="https://github.com/aswab007-ops">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=900&size=22&duration=2200&pause=650&color=9DFBFF&center=true&vCenter=true&width=920&lines=I+build+mobile+apps+that+feel+production-ready.;I+ship+full-stack+systems+with+clean+flows.;I+turn+pixels%2C+APIs%2C+and+models+into+real+products.;Flutter+%2B+MERN+%2B+Computer+Vision+%2B+AI." alt="Typing animation" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=900&size=20&duration=2200&pause=650&color=FF9EED&center=true&vCenter=true&width=920&lines=I+build+mobile+apps+that+feel+production-ready.;I+ship+full-stack+systems+with+clean+flows.;I+turn+pixels%2C+APIs%2C+and+models+into+real+products.;Flutter+%2B+MERN+%2B+Computer+Vision+%2B+AI." alt="Typing animation" />
   </a>
 
   <br />
@@ -17,12 +17,12 @@
 <img src="./assets/neon-divider.svg" width="100%" alt="Neon divider" />
 
 <div align="center">
-
   <img src="./assets/terminal-panel.svg" width="96%" alt="Boot console showing profile systems loaded" />
-
 </div>
 
 <img src="./assets/neon-divider.svg" width="100%" alt="Neon divider" />
+
+<img src="./assets/header-signal.svg" width="100%" alt="Signal" />
 
 <table>
   <tr>
@@ -30,11 +30,11 @@
 
 ## Signal
 
-I am a **Software Engineer** and **BS Artificial Intelligence student at ITU Lahore** building across mobile, full-stack web, and applied computer vision.
+I am a **Software Engineer** and **BS Artificial Intelligence** student at ITU Lahore, building across mobile, full-stack web, and applied computer vision.
 
 My favorite work sits where product polish meets engineering depth: camera workflows, offline-first data capture, dashboards, media pipelines, authentication, image processing, and systems that feel finished from the first tap.
 
-I am not here to collect random repos. I am here to build sharp, useful software with real-world edges.
+> I am not here to collect random repos. I am here to build sharp, useful software with real-world edges.
 
     </td>
     <td width="45%" valign="top">
@@ -42,29 +42,30 @@ I am not here to collect random repos. I am here to build sharp, useful software
 ## Current Stack
 
 ```yaml
-mobile:
-  - Flutter
-  - Dart
-  - Provider
-  - GoRouter
-  - Camera workflows
-  - Offline storage
+current_stack:
+  mobile:
+    - Flutter
+    - Dart
+    - Provider
+    - GoRouter
+    - Camera workflows
+    - Offline storage
 
-web:
-  - React
-  - Node.js
-  - Express
-  - MongoDB
-  - JWT auth
-  - Tailwind CSS
+  web:
+    - React
+    - Node.js
+    - Express
+    - MongoDB
+    - JWT auth
+    - Tailwind CSS
 
-ai_cv:
-  - OpenCV
-  - NumPy
-  - OCR
-  - ResNet
-  - SIFT / BoVW
-  - 3D reconstruction
+  ai_cv:
+    - OpenCV
+    - NumPy
+    - OCR
+    - ResNet
+    - SIFT / BoVW
+    - 3D reconstruction
 ```
 
     </td>
@@ -72,6 +73,8 @@ ai_cv:
 </table>
 
 <img src="./assets/neon-divider.svg" width="100%" alt="Neon divider" />
+
+<img src="./assets/header-arsenal.svg" width="100%" alt="Arsenal" />
 
 ## Arsenal
 
@@ -90,6 +93,8 @@ ai_cv:
 </div>
 
 <img src="./assets/neon-divider.svg" width="100%" alt="Neon divider" />
+
+<img src="./assets/header-build.svg" width="100%" alt="What I Build" />
 
 ## What I Build
 
@@ -128,12 +133,14 @@ ai_cv:
 
 <img src="./assets/neon-divider.svg" width="100%" alt="Neon divider" />
 
+<img src="./assets/header-dna.svg" width="100%" alt="Build DNA" />
+
 ## Build DNA
 
 <div align="center">
 
 | Layer | What I Care About |
-|---|---|
+|:---|:---|
 | **Interface** | Clean screens, obvious actions, fast comprehension |
 | **State** | Predictable flows, recoverable sessions, low friction |
 | **Backend** | Auth, APIs, validation, storage, media, deployment |
@@ -143,6 +150,8 @@ ai_cv:
 </div>
 
 <img src="./assets/neon-divider.svg" width="100%" alt="Neon divider" />
+
+<img src="./assets/header-github.svg" width="100%" alt="GitHub Energy" />
 
 ## GitHub Energy
 
@@ -158,6 +167,8 @@ ai_cv:
 </div>
 
 <img src="./assets/neon-divider.svg" width="100%" alt="Neon divider" />
+
+<img src="./assets/header-leveling.svg" width="100%" alt="Currently Leveling Up" />
 
 ## Currently Leveling Up
 
@@ -177,6 +188,8 @@ ai_cv:
 
 <img src="./assets/neon-divider.svg" width="100%" alt="Neon divider" />
 
+<img src="./assets/header-connect.svg" width="100%" alt="Connect" />
+
 ## Connect
 
 <div align="center">
@@ -192,8 +205,6 @@ ai_cv:
   </a>
 
 </div>
-
-<br />
 
 <div align="center">
 
