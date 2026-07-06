@@ -3,7 +3,7 @@
   <img src="./assets/neon-hero.svg" width="100%" alt="Muhammad Aswab Khalil cyberpunk portfolio banner" />
 
   <a href="https://github.com/aswab007-ops">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=24&duration=2200&pause=650&color=22D3EE&center=true&vCenter=true&width=920&lines=I+build+mobile+apps+that+feel+production-ready.;I+ship+full-stack+systems+with+clean+flows.;I+turn+pixels%2C+APIs%2C+and+models+into+real+products.;Flutter+%2B+MERN+%2B+Computer+Vision+%2B+AI." alt="Typing animation" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=900&size=22&duration=2200&pause=650&color=9DFBFF&center=true&vCenter=true&width=920&lines=I+build+mobile+apps+that+feel+production-ready.;I+ship+full-stack+systems+with+clean+flows.;I+turn+pixels%2C+APIs%2C+and+models+into+real+products.;Flutter+%2B+MERN+%2B+Computer+Vision+%2B+AI." alt="Typing animation" />
   </a>
 
   <br />
@@ -18,14 +18,7 @@
 
 <div align="center">
 
-```txt
-> booting profile...
-> loading mobile systems............. done
-> loading full-stack architecture.... done
-> loading computer vision models..... done
-> loading product instincts.......... done
-> status: building things that look good, work hard, and survive real users
-```
+  <img src="./assets/terminal-panel.svg" width="96%" alt="Boot console showing profile systems loaded" />
 
 </div>
 
@@ -155,12 +148,12 @@ ai_cv:
 
 <div align="center">
 
-  <img height="174" src="https://github-readme-stats.vercel.app/api?username=aswab007-ops&show_icons=true&theme=tokyonight&hide_border=true&border_radius=16&bg_color=050505&title_color=22D3EE&text_color=F8FAFC&icon_color=EC4899&hide_rank=true" alt="GitHub stats" />
-  <img height="174" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aswab007-ops&layout=compact&theme=tokyonight&hide_border=true&border_radius=16&bg_color=050505&title_color=F0ABFC&text_color=F8FAFC" alt="Top languages" />
+  <img height="174" src="https://github-readme-stats.vercel.app/api?username=aswab007-ops&show_icons=true&theme=tokyonight&hide_border=true&border_radius=18&bg_color=020608&title_color=22F7FF&text_color=EAFBFF&icon_color=FF4FE3&hide_rank=true" alt="GitHub stats" />
+  <img height="174" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aswab007-ops&layout=compact&theme=tokyonight&hide_border=true&border_radius=18&bg_color=020608&title_color=FF4FE3&text_color=EAFBFF" alt="Top languages" />
 
   <br /><br />
 
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=aswab007-ops&theme=react-dark&hide_border=true&radius=16&area=true&bg_color=050505&color=F8FAFC&line=22D3EE&point=EC4899&area_color=8B5CF6" width="95%" alt="GitHub activity graph" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=aswab007-ops&theme=react-dark&hide_border=true&radius=18&area=true&bg_color=020608&color=EAFBFF&line=22F7FF&point=FF4FE3&area_color=536DFF" width="95%" alt="GitHub activity graph" />
 
 </div>
 

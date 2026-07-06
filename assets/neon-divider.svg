@@ -1,19 +1,27 @@
-<svg width="1200" height="34" viewBox="0 0 1200 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1200" height="54" viewBox="0 0 1200 54" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="line" x1="120" y1="17" x2="1080" y2="17" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#050505" stop-opacity="0"/>
-      <stop offset=".18" stop-color="#22D3EE"/>
-      <stop offset=".5" stop-color="#A855F7"/>
-      <stop offset=".82" stop-color="#FB7185"/>
-      <stop offset="1" stop-color="#050505" stop-opacity="0"/>
+    <linearGradient id="line" x1="128" y1="27" x2="1072" y2="27" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#05080B" stop-opacity="0"/>
+      <stop offset=".16" stop-color="#22F7FF"/>
+      <stop offset=".5" stop-color="#8A8CFF"/>
+      <stop offset=".84" stop-color="#FF4FE3"/>
+      <stop offset="1" stop-color="#05080B" stop-opacity="0"/>
     </linearGradient>
-    <filter id="glow" x="0" y="0" width="1200" height="34" color-interpolation-filters="sRGB">
-      <feGaussianBlur stdDeviation="3"/>
+    <filter id="glow" x="0" y="0" width="1200" height="54" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="4"/>
       <feBlend in2="SourceGraphic" mode="screen"/>
     </filter>
   </defs>
-  <path d="M120 17H1080" stroke="url(#line)" stroke-width="2" filter="url(#glow)"/>
-  <circle cx="600" cy="17" r="5" fill="#F0ABFC"/>
-  <circle cx="560" cy="17" r="3" fill="#22D3EE"/>
-  <circle cx="640" cy="17" r="3" fill="#FB7185"/>
+  <path d="M128 27H1072" stroke="url(#line)" stroke-width="2" filter="url(#glow)"/>
+  <path d="M348 18L360 27L348 36" stroke="#22F7FF" stroke-opacity=".5"/>
+  <path d="M852 18L840 27L852 36" stroke="#FF4FE3" stroke-opacity=".5"/>
+  <circle cx="552" cy="27" r="6" fill="#22F7FF">
+    <animate attributeName="opacity" values=".35;1;.35" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="600" cy="27" r="6" fill="#FF4FE3">
+    <animate attributeName="opacity" values="1;.35;1" dur="2.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="648" cy="27" r="6" fill="#7DEBFF">
+    <animate attributeName="opacity" values=".45;.9;.45" dur="3.1s" repeatCount="indefinite"/>
+  </circle>
 </svg>
