@@ -18,7 +18,7 @@
 
   <br />
 
-  <img src="https://komarev.com/ghpvc/?username=aswab007-ops&style=for-the-badge&color=0D1117&label=PROFILE%20VIEWS&labelColor=0D1117" alt="Profile views" />
+  <img src="https://img.shields.io/badge/FOCUS:-PRODUCT%20ENGINEERING-0D1117?style=for-the-badge&labelColor=0D1117&color=0D1117" alt="Focus product engineering" />
   <img src="https://img.shields.io/badge/MODE:-BUILDER-0D1117?style=for-the-badge&labelColor=0D1117&color=0D1117" alt="Mode builder" />
   <img src="https://img.shields.io/badge/BASE:-LAHORE%2C%20PAKISTAN-0D1117?style=for-the-badge&labelColor=0D1117&color=0D1117" alt="Base Lahore Pakistan" />
 
