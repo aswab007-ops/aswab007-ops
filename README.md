@@ -1,20 +1,20 @@
 <div align="center">
 
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=290&color=0:030712,35:0F766E,70:7C2D12,100:F97316&text=Muhammad%20Aswab%20Khalil&fontColor=FFFFFF&fontSize=52&fontAlignY=36&desc=Software%20Engineer%20%7C%20Flutter%20%7C%20MERN%20%7C%20Computer%20Vision%20%2B%20AI&descSize=18&descAlignY=56&animation=fadeIn" width="100%" alt="Muhammad Aswab Khalil banner" />
+  <img src="./assets/neon-hero.svg" width="100%" alt="Muhammad Aswab Khalil cyberpunk portfolio banner" />
 
   <a href="https://github.com/aswab007-ops">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=24&duration=2200&pause=650&color=14B8A6&center=true&vCenter=true&width=920&lines=I+build+mobile+apps+that+feel+production-ready.;I+ship+full-stack+systems+with+clean+flows.;I+turn+pixels%2C+APIs%2C+and+models+into+real+products.;Flutter+%2B+MERN+%2B+Computer+Vision+%2B+AI." alt="Typing animation" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=24&duration=2200&pause=650&color=22D3EE&center=true&vCenter=true&width=920&lines=I+build+mobile+apps+that+feel+production-ready.;I+ship+full-stack+systems+with+clean+flows.;I+turn+pixels%2C+APIs%2C+and+models+into+real+products.;Flutter+%2B+MERN+%2B+Computer+Vision+%2B+AI." alt="Typing animation" />
   </a>
 
   <br />
 
-  <img src="https://komarev.com/ghpvc/?username=aswab007-ops&style=for-the-badge&color=14b8a6&label=PROFILE+VIEWS" alt="Profile views" />
-  <img src="https://img.shields.io/badge/Mode-Builder-0f172a?style=for-the-badge&labelColor=f97316" alt="Builder mode" />
-  <img src="https://img.shields.io/badge/Base-Lahore%2C%20Pakistan-111827?style=for-the-badge&labelColor=14b8a6" alt="Lahore Pakistan" />
+  <img src="https://komarev.com/ghpvc/?username=aswab007-ops&style=for-the-badge&color=22d3ee&label=PROFILE+VIEWS" alt="Profile views" />
+  <img src="https://img.shields.io/badge/Mode-Builder-050505?style=for-the-badge&labelColor=ec4899&color=050505" alt="Builder mode" />
+  <img src="https://img.shields.io/badge/Base-Lahore%2C%20Pakistan-050505?style=for-the-badge&labelColor=8b5cf6&color=050505" alt="Lahore Pakistan" />
 
 </div>
 
----
+<img src="./assets/neon-divider.svg" width="100%" alt="Neon divider" />
 
 <div align="center">
 
@@ -29,7 +29,7 @@
 
 </div>
 
----
+<img src="./assets/neon-divider.svg" width="100%" alt="Neon divider" />
 
 <table>
   <tr>
@@ -78,7 +78,7 @@ ai_cv:
   </tr>
 </table>
 
----
+<img src="./assets/neon-divider.svg" width="100%" alt="Neon divider" />
 
 ## Arsenal
 
@@ -88,43 +88,43 @@ ai_cv:
 
   <br /><br />
 
-  <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter" />
-  <img src="https://img.shields.io/badge/MERN-111827?style=for-the-badge&logo=mongodb&logoColor=47A248" alt="MERN" />
-  <img src="https://img.shields.io/badge/Computer%20Vision-14B8A6?style=for-the-badge&logo=opencv&logoColor=white" alt="Computer Vision" />
-  <img src="https://img.shields.io/badge/AI%20Engineering-F97316?style=for-the-badge&logo=openai&logoColor=white" alt="AI Engineering" />
-  <img src="https://img.shields.io/badge/Product%20Mindset-0F172A?style=for-the-badge&logo=rocket&logoColor=white" alt="Product Mindset" />
+  <img src="https://img.shields.io/badge/Flutter-050505?style=for-the-badge&logo=flutter&logoColor=22D3EE&labelColor=0B1020" alt="Flutter" />
+  <img src="https://img.shields.io/badge/MERN-050505?style=for-the-badge&logo=mongodb&logoColor=4ADE80&labelColor=0B1020" alt="MERN" />
+  <img src="https://img.shields.io/badge/Computer%20Vision-050505?style=for-the-badge&logo=opencv&logoColor=F0ABFC&labelColor=0B1020" alt="Computer Vision" />
+  <img src="https://img.shields.io/badge/AI%20Engineering-050505?style=for-the-badge&logo=openai&logoColor=EC4899&labelColor=0B1020" alt="AI Engineering" />
+  <img src="https://img.shields.io/badge/Product%20Mindset-050505?style=for-the-badge&logo=rocket&logoColor=F97316&labelColor=0B1020" alt="Product Mindset" />
 
 </div>
 
----
+<img src="./assets/neon-divider.svg" width="100%" alt="Neon divider" />
 
 ## What I Build
 
 <table>
   <tr>
     <td align="center" width="25%">
-      <img src="https://img.icons8.com/fluency/96/smartphone-tablet.png" width="58" alt="Mobile apps" />
+      <img src="https://img.icons8.com/fluency/96/smartphone-tablet.png" width="64" alt="Mobile apps" />
       <br />
       <strong>Production Mobile Apps</strong>
       <br />
       Flutter apps with structured flows, API integration, image capture, and offline-safe behavior.
     </td>
     <td align="center" width="25%">
-      <img src="https://img.icons8.com/fluency/96/web.png" width="58" alt="Full stack web" />
+      <img src="https://img.icons8.com/fluency/96/web.png" width="64" alt="Full stack web" />
       <br />
       <strong>Full-Stack Platforms</strong>
       <br />
       MERN systems with auth, dashboards, file uploads, analytics, and clean user journeys.
     </td>
     <td align="center" width="25%">
-      <img src="https://img.icons8.com/fluency/96/artificial-intelligence.png" width="58" alt="AI and vision" />
+      <img src="https://img.icons8.com/fluency/96/artificial-intelligence.png" width="64" alt="AI and vision" />
       <br />
       <strong>Vision + AI Systems</strong>
       <br />
       Image processing, recognition, OCR, feature extraction, model evaluation, and geometry.
     </td>
     <td align="center" width="25%">
-      <img src="https://img.icons8.com/fluency/96/combo-chart.png" width="58" alt="Product systems" />
+      <img src="https://img.icons8.com/fluency/96/combo-chart.png" width="64" alt="Product systems" />
       <br />
       <strong>Product-Ready Flows</strong>
       <br />
@@ -133,7 +133,7 @@ ai_cv:
   </tr>
 </table>
 
----
+<img src="./assets/neon-divider.svg" width="100%" alt="Neon divider" />
 
 ## Build DNA
 
@@ -149,51 +149,53 @@ ai_cv:
 
 </div>
 
----
+<img src="./assets/neon-divider.svg" width="100%" alt="Neon divider" />
 
 ## GitHub Energy
 
 <div align="center">
 
-  <img height="172" src="https://github-readme-stats.vercel.app/api?username=aswab007-ops&show_icons=true&theme=tokyonight&hide_border=true&border_radius=12&title_color=14B8A6&icon_color=F97316&hide_rank=true" alt="GitHub stats" />
-  <img height="172" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aswab007-ops&layout=compact&theme=tokyonight&hide_border=true&border_radius=12&title_color=14B8A6" alt="Top languages" />
+  <img height="174" src="https://github-readme-stats.vercel.app/api?username=aswab007-ops&show_icons=true&theme=tokyonight&hide_border=true&border_radius=16&bg_color=050505&title_color=22D3EE&text_color=F8FAFC&icon_color=EC4899&hide_rank=true" alt="GitHub stats" />
+  <img height="174" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aswab007-ops&layout=compact&theme=tokyonight&hide_border=true&border_radius=16&bg_color=050505&title_color=F0ABFC&text_color=F8FAFC" alt="Top languages" />
 
   <br /><br />
 
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=aswab007-ops&theme=react-dark&hide_border=true&radius=12&area=true&color=14B8A6&line=F97316&point=FFFFFF" width="95%" alt="GitHub activity graph" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=aswab007-ops&theme=react-dark&hide_border=true&radius=16&area=true&bg_color=050505&color=F8FAFC&line=22D3EE&point=EC4899&area_color=8B5CF6" width="95%" alt="GitHub activity graph" />
 
 </div>
 
----
+<img src="./assets/neon-divider.svg" width="100%" alt="Neon divider" />
 
 ## Currently Leveling Up
 
 <div align="center">
 
-```txt
-Flutter architecture        ███████████████████░░  90%
-MERN product systems        ██████████████████░░░  86%
-Computer vision             █████████████████░░░░  82%
-AI fundamentals             ████████████████░░░░░  78%
-Shipping discipline         ███████████████████░░  91%
-```
+  <img src="https://progress-bar.dev/90/?title=Flutter%20architecture&width=520&color=22D3EE&suffix=%25" alt="Flutter architecture 90%" />
+  <br />
+  <img src="https://progress-bar.dev/86/?title=MERN%20product%20systems&width=520&color=8B5CF6&suffix=%25" alt="MERN product systems 86%" />
+  <br />
+  <img src="https://progress-bar.dev/82/?title=Computer%20vision&width=520&color=EC4899&suffix=%25" alt="Computer vision 82%" />
+  <br />
+  <img src="https://progress-bar.dev/78/?title=AI%20fundamentals&width=520&color=F0ABFC&suffix=%25" alt="AI fundamentals 78%" />
+  <br />
+  <img src="https://progress-bar.dev/91/?title=Shipping%20discipline&width=520&color=F97316&suffix=%25" alt="Shipping discipline 91%" />
 
 </div>
 
----
+<img src="./assets/neon-divider.svg" width="100%" alt="Neon divider" />
 
 ## Connect
 
 <div align="center">
 
   <a href="mailto:aswabkhalil@gmail.com">
-    <img src="https://img.shields.io/badge/Email-0F172A?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+    <img src="https://img.shields.io/badge/Email-050505?style=for-the-badge&logo=gmail&logoColor=EA4335&labelColor=0B1020" alt="Email" />
   </a>
   <a href="https://www.linkedin.com/in/muhammad-aswab-khalil-b578a235a/">
-    <img src="https://img.shields.io/badge/LinkedIn-14B8A6?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+    <img src="https://img.shields.io/badge/LinkedIn-050505?style=for-the-badge&logo=linkedin&logoColor=22D3EE&labelColor=0B1020" alt="LinkedIn" />
   </a>
   <a href="https://github.com/aswab007-ops">
-    <img src="https://img.shields.io/badge/GitHub-F97316?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+    <img src="https://img.shields.io/badge/GitHub-050505?style=for-the-badge&logo=github&logoColor=F0ABFC&labelColor=0B1020" alt="GitHub" />
   </a>
 
 </div>
@@ -202,6 +204,6 @@ Shipping discipline         █████████████████�
 
 <div align="center">
 
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=130&section=footer&color=0:030712,35:0F766E,70:7C2D12,100:F97316" width="100%" alt="Footer wave" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=150&section=footer&color=0:050505,28:0EA5E9,58:8B5CF6,100:EC4899" width="100%" alt="Footer wave" />
 
 </div>

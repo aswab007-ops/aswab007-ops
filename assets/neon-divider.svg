@@ -1,0 +1,19 @@
+<svg width="1200" height="34" viewBox="0 0 1200 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="line" x1="120" y1="17" x2="1080" y2="17" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#050505" stop-opacity="0"/>
+      <stop offset=".18" stop-color="#22D3EE"/>
+      <stop offset=".5" stop-color="#A855F7"/>
+      <stop offset=".82" stop-color="#FB7185"/>
+      <stop offset="1" stop-color="#050505" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="0" y="0" width="1200" height="34" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="3"/>
+      <feBlend in2="SourceGraphic" mode="screen"/>
+    </filter>
+  </defs>
+  <path d="M120 17H1080" stroke="url(#line)" stroke-width="2" filter="url(#glow)"/>
+  <circle cx="600" cy="17" r="5" fill="#F0ABFC"/>
+  <circle cx="560" cy="17" r="3" fill="#22D3EE"/>
+  <circle cx="640" cy="17" r="3" fill="#FB7185"/>
+</svg>
