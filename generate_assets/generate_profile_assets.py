@@ -236,17 +236,17 @@ def draw_hero_frame(phase: float, outer_angle: float | None = None, inner_angle:
         draw.text((760, y), done, fill=GREEN, font=font(FONT_MONO_BOLD, 17))
         y += 25
     draw.text((250, 798), "✳ status: building things that look good, work hard, and survive real users", fill=(218, 253, 255), font=font(FONT_MONO, 15))
-    return img.convert("P", palette=Image.ADAPTIVE, colors=192)
+    return img.convert("P", palette=Image.ADAPTIVE, colors=96)
 
 
 def make_hero_gif():
-    total = 40
+    total = 24
     frames = []
     for i in range(total):
         t = i / total
         frame = draw_hero_frame(math.tau * t).convert("RGBA").crop((0, 0, 1200, 420))
-        frames.append(frame.convert("P", palette=Image.ADAPTIVE, colors=192))
-    frames[0].save(ASSETS / "hero-banner.gif", save_all=True, append_images=frames[1:], duration=120, loop=0, optimize=True)
+        frames.append(frame.convert("P", palette=Image.ADAPTIVE, colors=96))
+    frames[0].save(ASSETS / "hero-banner.gif", save_all=True, append_images=frames[1:], duration=200, loop=0, optimize=True)
 
 
 def draw_terminal_frame(chars: int, blink: bool) -> Image.Image:
@@ -284,7 +284,7 @@ def draw_terminal_frame(chars: int, blink: bool) -> Image.Image:
             shown = line.replace("_", "█" if blink else " ")
             draw.text((250, y), shown, fill=(220, 252, 255), font=font(FONT_MONO, 18))
         y += 29
-    return img.convert("P", palette=Image.ADAPTIVE, colors=128)
+    return img.convert("P", palette=Image.ADAPTIVE, colors=80)
 
 
 def make_terminal_gif():
@@ -297,7 +297,7 @@ def make_terminal_gif():
         "✳ status: building things that look good, work hard, and survive real users",
         "> _",
     ])
-    counts = list(range(0, len(full) + 1, 6)) + [len(full)] * 12
+    counts = list(range(0, len(full) + 1, 12)) + [len(full)] * 7
     frames = [draw_terminal_frame(c, i % 2 == 0) for i, c in enumerate(counts)]
     frames[0].save(ASSETS / "terminal-boot.gif", save_all=True, append_images=frames[1:], duration=45, loop=0, optimize=True)
 

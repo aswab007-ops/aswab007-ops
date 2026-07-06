@@ -261,13 +261,13 @@ def draw_frame(frame_idx: int, total: int) -> Image.Image:
     draw_gradient_tube(img, pulse, phase)
     draw_icons(draw)
     draw_bottom_tools(draw, pulse * .45 + .25)
-    return img.resize((W, H), Image.Resampling.LANCZOS).convert("P", palette=Image.ADAPTIVE, colors=192)
+    return img.resize((W, H), Image.Resampling.LANCZOS).convert("P", palette=Image.ADAPTIVE, colors=96)
 
 
 def main() -> None:
-    total = 32
+    total = 20
     frames = [draw_frame(i, total) for i in range(total)]
-    frames[0].save(ASSETS / "tech-stack-panel.gif", save_all=True, append_images=frames[1:], duration=95, loop=0, optimize=True)
+    frames[0].save(ASSETS / "tech-stack-panel.gif", save_all=True, append_images=frames[1:], duration=150, loop=0, optimize=True)
     print("generated assets/tech-stack-panel.gif")
 
 
