@@ -40,31 +40,11 @@
 
 <img src="./assets/neon-divider.svg" width="100%" alt="Neon cyan magenta divider" />
 
-<table>
-  <tr>
-    <td>
-
-### <code>&gt; tech_stack --list</code>
-
 <div align="center">
 
-<img src="./assets/circuit-overlay.svg" width="100%" alt="Faint circuit overlay texture" />
-
-<br />
-
-<img src="https://skillicons.dev/icons?i=flutter,dart,react,nodejs,express,mongodb,python,opencv,pytorch,tensorflow,firebase,git,github,docker,linux,figma,vercel,vscode" alt="Tech stack icons for Flutter, Dart, MERN, CV AI, Firebase, Git, Docker, Linux, Figma, Vercel, and VS Code" />
-
-<br /><br />
-
-<img src="https://img.shields.io/badge/mobile-Flutter%20%7C%20Dart%20%7C%20Provider%20%7C%20GoRouter-0D1117?style=for-the-badge&labelColor=0D1117&color=0D1117" alt="Mobile stack" />
-<img src="https://img.shields.io/badge/web-React%20%7C%20Node%20%7C%20Express%20%7C%20MongoDB-0D1117?style=for-the-badge&labelColor=0D1117&color=0D1117" alt="Web stack" />
-<img src="https://img.shields.io/badge/vision-OpenCV%20%7C%20OCR%20%7C%20ResNet%20%7C%203D%20Geometry-0D1117?style=for-the-badge&labelColor=0D1117&color=0D1117" alt="Computer vision stack" />
+  <img src="./assets/tech-stack-panel.svg" width="100%" alt="Tech stack console panel listing mobile, web, vision, and workflow tools" />
 
 </div>
-
-    </td>
-  </tr>
-</table>
 
 <img src="./assets/neon-divider.svg" width="100%" alt="Neon cyan magenta divider" />
 
