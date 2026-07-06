@@ -86,26 +86,63 @@ def draw_circuit(draw: ImageDraw.ImageDraw, x0: int, y0: int, x1: int, y1: int, 
 
 
 def draw_energy_ring(size, phase: float) -> Image.Image:
-    layer = Image.new("RGBA", size, (0, 0, 0, 0))
-    draw = ImageDraw.Draw(layer)
-    cx, cy = 600, 230
-    for color, offset, width, rx, ry in [
-        (CYAN, 0, 7, 350, 210),
-        (MAGENTA, math.pi, 6, 345, 205),
-    ]:
-        for i in range(170):
-            a = (i / 170) * math.tau + phase + offset
-            wob = math.sin(a * 4 + phase * 1.7) * 18
-            rrx = rx + wob
-            rry = ry + math.cos(a * 3 - phase) * 14
-            x = cx + math.cos(a) * rrx
-            y = cy + math.sin(a) * rry
-            a2 = a + .035
-            x2 = cx + math.cos(a2) * (rrx + math.sin(a * 2) * 10)
-            y2 = cy + math.sin(a2) * (rry + math.cos(a * 2) * 8)
-            alpha = int(60 + 145 * (0.5 + 0.5 * math.sin(i * .18 + phase * 2)))
-            draw.line((x, y, x2, y2), fill=(*color, alpha), width=width)
-    return layer.filter(ImageFilter.GaussianBlur(1.1))
+    scale = 2
+    sw, sh = size[0] * scale, size[1] * scale
+    layer = Image.new("RGBA", (sw, sh), (0, 0, 0, 0))
+
+    def ribbon_points(
+        cx: float,
+        cy: float,
+        rx: float,
+        ry: float,
+        start: float,
+        sweep: float,
+        wobble: float,
+        twist: float,
+        samples: int = 460,
+    ) -> list[tuple[int, int]]:
+        pts: list[tuple[int, int]] = []
+        for i in range(samples):
+            t = i / (samples - 1)
+            a = start + sweep * t + phase * 0.18
+            organic = math.sin(a * 2.25 + phase * 1.4) * wobble
+            organic += math.sin(a * 5.1 - phase * 0.7) * wobble * 0.28
+            x = cx + math.cos(a) * (rx + organic)
+            y = cy + math.sin(a + math.sin(a * 1.4) * 0.055) * (ry + math.cos(a * 2.7 + phase) * twist)
+            pts.append((int(x * scale), int(y * scale)))
+        return pts
+
+    def draw_ribbon(points: list[tuple[int, int]], color: tuple[int, int, int], delay: float) -> None:
+        # Blurred continuous underpainting: no points, vertices, or node marks.
+        for width, alpha, blur in [(34, 38, 13), (20, 72, 7), (11, 116, 3)]:
+            glow = Image.new("RGBA", (sw, sh), (0, 0, 0, 0))
+            gd = ImageDraw.Draw(glow)
+            gd.line(points, fill=(*color, alpha), width=width * scale, joint="curve")
+            layer.alpha_composite(glow.filter(ImageFilter.GaussianBlur(blur * scale)))
+
+        # Hot inner ribbon, drawn as densely sampled connected curve segments with tapering opacity.
+        core = Image.new("RGBA", (sw, sh), (0, 0, 0, 0))
+        cd = ImageDraw.Draw(core)
+        for i in range(len(points) - 1):
+            t = i / (len(points) - 2)
+            fade = 0.24 + 0.76 * (0.5 + 0.5 * math.sin(t * math.tau * 1.35 + phase * 1.2 + delay))
+            taper = math.sin(math.pi * t) ** 0.28
+            width = int((3.2 + 5.8 * taper) * scale)
+            alpha = int(42 + 178 * fade * taper)
+            cd.line((points[i], points[i + 1]), fill=(*color, alpha), width=max(2, width))
+        layer.alpha_composite(core)
+
+        highlight = Image.new("RGBA", (sw, sh), (0, 0, 0, 0))
+        hd = ImageDraw.Draw(highlight)
+        hd.line(points, fill=(230, 255, 255, 96), width=2 * scale, joint="curve")
+        layer.alpha_composite(highlight.filter(ImageFilter.GaussianBlur(0.35 * scale)))
+
+    cyan_path = ribbon_points(590, 198, 348, 215, -2.38 + phase * 0.055, math.tau * 1.05, 22, 18)
+    magenta_path = ribbon_points(620, 205, 352, 207, 0.72 - phase * 0.05, math.tau * 1.02, 24, 20)
+    draw_ribbon(cyan_path, CYAN, 0.0)
+    draw_ribbon(magenta_path, MAGENTA, math.pi * 0.7)
+
+    return layer.resize(size, Image.Resampling.LANCZOS)
 
 
 def draw_hero_frame(phase: float) -> Image.Image:
