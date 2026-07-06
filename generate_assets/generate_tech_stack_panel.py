@@ -152,7 +152,7 @@ def draw_header(img: Image.Image, pulse: float):
     ld.line([(sc(24), sc(46)), (sc(608), sc(46)), (sc(594), sc(88)), (sc(24), sc(88)), (sc(24), sc(46))], fill=(*CYAN, int(150 + 80 * pulse)), width=sc(3))
     ld.line([(sc(606), sc(46)), (sc(1176), sc(46)), (sc(1176), sc(88)), (sc(594), sc(88)), (sc(606), sc(46))], fill=(*MAGENTA, int(145 + 80 * pulse)), width=sc(3))
     add_glow(img, layer, 7, .85)
-    text(draw, (38, 73), "> tech_stack --list", TEXT, font(FONT_MONO_BOLD, 26), stroke_width=1, stroke_fill=(0, 0, 0, 180))
+    text(draw, (38, 55), "> tech_stack --list", TEXT, font(FONT_MONO_BOLD, 26), stroke_width=1, stroke_fill=(0, 0, 0, 180))
 
 
 def draw_labels(draw: ImageDraw.ImageDraw):
