@@ -8,7 +8,7 @@
 
 <div align="center">
 
-  <sub><code>&gt; Active Mission Profile:</code></sub>
+  <code><strong>&gt; Active Mission Profile:</strong></code>
 
   <br />
 
