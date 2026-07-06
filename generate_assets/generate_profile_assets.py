@@ -176,30 +176,18 @@ def draw_hero_frame(phase: float, outer_angle: float | None = None, inner_angle:
     # hero panel
     metal = (46, 51, 61, 190)
     rounded_rect(draw, (62, 52, 1138, 396), 30, (12, 18, 24, 206), metal, 8)
-    electric = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    ed = ImageDraw.Draw(electric)
-    wave_alpha = int(165 + 90 * frame_pulse)
-    for y, color, offset in [(72, MAGENTA, 0), (382, MAGENTA, math.pi), (392, CYAN, math.pi * .45)]:
-        pts = []
-        for x in range(82, 1119, 18):
-            jitter = math.sin(x * 0.045 + phase * 3.0 + offset) * 4
-            jitter += math.sin(x * 0.12 - phase * 2.0) * 1.7
-            pts.append((x, y + jitter))
-        ed.line(pts, fill=(*color, wave_alpha), width=4)
-    electric = electric.filter(ImageFilter.GaussianBlur(1.1))
-    add_glow(img, electric, int(9 + 7 * frame_pulse), .82)
     for inset, alpha, width in [(18, 190, 3), (34, 125, 2), (50, 70, 1)]:
         border = Image.new("RGBA", (W, H), (0, 0, 0, 0))
         bd = ImageDraw.Draw(border)
         pulse_alpha = min(255, int(alpha * (0.72 + 0.42 * frame_pulse)))
         bd.rounded_rectangle((62 + inset, 52 + inset, 1138 - inset, 396 - inset), radius=26, outline=(*CYAN, pulse_alpha), width=width)
         bd.rounded_rectangle((62 + inset, 52 + inset, 1138 - inset, 396 - inset), radius=26, outline=(*MAGENTA, max(32, pulse_alpha // 2)), width=width)
-        add_glow(img, border, int(10 + 9 * frame_pulse), .85 + .45 * frame_pulse)
+        add_glow(img, border, int(12 + 10 * frame_pulse), 1.0 + .5 * frame_pulse)
     hot_border = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     hd = ImageDraw.Draw(hot_border)
-    hd.rounded_rectangle((80, 70, 1120, 378), radius=25, outline=(*MAGENTA, int(145 + 110 * frame_pulse)), width=6)
-    hd.rounded_rectangle((80, 70, 1120, 378), radius=25, outline=(*CYAN, int(125 + 105 * (1 - frame_pulse))), width=4)
-    add_glow(img, hot_border, int(16 + 10 * frame_pulse), 1.15)
+    hd.rounded_rectangle((80, 70, 1120, 378), radius=25, outline=(*MAGENTA, int(165 + 90 * frame_pulse)), width=6)
+    hd.rounded_rectangle((80, 70, 1120, 378), radius=25, outline=(*CYAN, int(145 + 85 * (1 - frame_pulse))), width=4)
+    add_glow(img, hot_border, int(18 + 12 * frame_pulse), 1.25)
 
     circuit = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     cd = ImageDraw.Draw(circuit)
