@@ -155,6 +155,7 @@ def draw_energy_ring(size, outer_angle: float, inner_angle: float) -> Image.Imag
 def draw_hero_frame(phase: float, outer_angle: float | None = None, inner_angle: float | None = None) -> Image.Image:
     img = Image.new("RGBA", (W, H), (*BG, 255))
     draw = ImageDraw.Draw(img)
+    frame_pulse = 0.5 + 0.5 * math.sin(phase)
 
     # digital rain and lab haze
     for col in range(0, W, 28):
@@ -178,21 +179,16 @@ def draw_hero_frame(phase: float, outer_angle: float | None = None, inner_angle:
     for inset, alpha, width in [(18, 190, 3), (34, 125, 2), (50, 70, 1)]:
         border = Image.new("RGBA", (W, H), (0, 0, 0, 0))
         bd = ImageDraw.Draw(border)
-        bd.rounded_rectangle((62 + inset, 52 + inset, 1138 - inset, 396 - inset), radius=26, outline=(*CYAN, alpha), width=width)
-        bd.rounded_rectangle((62 + inset, 52 + inset, 1138 - inset, 396 - inset), radius=26, outline=(*MAGENTA, alpha // 2), width=width)
-        add_glow(img, border, 7, .7)
+        pulse_alpha = min(255, int(alpha * (0.72 + 0.42 * frame_pulse)))
+        bd.rounded_rectangle((62 + inset, 52 + inset, 1138 - inset, 396 - inset), radius=26, outline=(*CYAN, pulse_alpha), width=width)
+        bd.rounded_rectangle((62 + inset, 52 + inset, 1138 - inset, 396 - inset), radius=26, outline=(*MAGENTA, max(32, pulse_alpha // 2)), width=width)
+        add_glow(img, border, int(6 + 5 * frame_pulse), .55 + .35 * frame_pulse)
 
     circuit = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     cd = ImageDraw.Draw(circuit)
     draw_circuit(cd, 105, 105, 505, 330, CYAN, 70)
     draw_circuit(cd, 700, 105, 1095, 330, MAGENTA, 68)
     img.alpha_composite(circuit)
-    if outer_angle is None:
-        outer_angle = phase
-    if inner_angle is None:
-        inner_angle = phase * -2
-    img.alpha_composite(draw_energy_ring((W, H), outer_angle, inner_angle))
-
     # terminal controls
     for i, c in enumerate([CYAN, MAGENTA, (120, 130, 145)]):
         x = 112 + i * 28
@@ -239,16 +235,13 @@ def draw_hero_frame(phase: float, outer_angle: float | None = None, inner_angle:
 
 
 def make_hero_gif():
-    total = 60
+    total = 40
     frames = []
     for i in range(total):
         t = i / total
-        # Static phase remains fixed; only the two ring layers rotate.
-        outer = -math.tau * t
-        inner = math.tau * 2 * t
-        frame = draw_hero_frame(0, outer, inner).convert("RGBA").crop((0, 0, 1200, 420))
+        frame = draw_hero_frame(math.tau * t).convert("RGBA").crop((0, 0, 1200, 420))
         frames.append(frame.convert("P", palette=Image.ADAPTIVE, colors=192))
-    frames[0].save(ASSETS / "hero-banner.gif", save_all=True, append_images=frames[1:], duration=300, loop=0, optimize=True)
+    frames[0].save(ASSETS / "hero-banner.gif", save_all=True, append_images=frames[1:], duration=120, loop=0, optimize=True)
 
 
 def draw_terminal_frame(chars: int, blink: bool) -> Image.Image:
