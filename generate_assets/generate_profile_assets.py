@@ -286,8 +286,6 @@ def draw_terminal_frame(chars: int, blink: bool) -> Image.Image:
             shown = line.replace("_", "█" if blink else " ")
             draw.text((250, y), shown, fill=(220, 252, 255), font=font(FONT_MONO, 18))
         y += 29
-    # lightning accent
-    draw.polygon([(1010, 176), (1034, 176), (1018, 210), (1044, 210), (990, 274), (1008, 226), (982, 226)], fill=(225, 245, 255, 90))
     return img.convert("P", palette=Image.ADAPTIVE, colors=128)
 
 
