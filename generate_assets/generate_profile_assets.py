@@ -236,13 +236,16 @@ def draw_terminal_frame(chars: int, blink: bool) -> Image.Image:
     w, h = 1160, 310
     img = Image.new("RGBA", (w, h), (3, 8, 10, 255))
     draw = ImageDraw.Draw(img)
-    rounded_rect(draw, (8, 8, w - 8, h - 8), 24, (6, 16, 20, 240), (*CYAN, 120), 2)
+    pulse = 165 if blink else 112
+    border_glow = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    bgd = ImageDraw.Draw(border_glow)
+    bgd.rounded_rectangle((8, 8, w - 8, h - 8), radius=24, outline=(*CYAN, pulse), width=3)
+    img.alpha_composite(border_glow.filter(ImageFilter.GaussianBlur(7)))
+    rounded_rect(draw, (8, 8, w - 8, h - 8), 24, (6, 16, 20, 240), (*CYAN, pulse), 2)
     rounded_rect(draw, (34, 34, w - 34, h - 34), 16, (2, 12, 14, 228), (230, 255, 255, 28), 1)
     for x in list(range(55, 185, 14)) + list(range(950, 1095, 14)):
         for y in range(50, 260, 18):
             draw.text((x, y), random.choice(["0", "1"]), fill=(0, 246, 255, 32), font=font(FONT_MONO, 9))
-    draw.rounded_rectangle((1067, 48, 1098, 79), radius=5, outline=(220, 245, 255, 120), width=2)
-    draw.rounded_rectangle((1057, 58, 1088, 89), radius=5, outline=(220, 245, 255, 80), width=2)
     boot = [
         "⚙ booting profile...",
         "▣ loading mobile systems.............. done",

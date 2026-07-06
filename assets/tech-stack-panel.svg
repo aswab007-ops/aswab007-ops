@@ -4,6 +4,8 @@
       <stop stop-color="#00F6FF"/>
       <stop offset=".52" stop-color="#6978FF"/>
       <stop offset="1" stop-color="#FF2ED1"/>
+      <animate attributeName="x1" values="38;180;38" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="1162;1010;1162" dur="6s" repeatCount="indefinite"/>
     </linearGradient>
     <linearGradient id="cyanPink" x1="92" y1="108" x2="1108" y2="108" gradientUnits="userSpaceOnUse">
       <stop stop-color="#00F6FF"/>
@@ -41,7 +43,9 @@
   <rect width="1200" height="760" fill="#05080D"/>
   <rect width="1200" height="760" fill="url(#scan)"/>
   <rect width="1200" height="760" fill="url(#hex)" opacity=".72"/>
-  <rect x="38" y="42" width="1124" height="676" rx="26" fill="#07111A" fill-opacity=".92" stroke="url(#frame)" stroke-width="2.2" filter="url(#glow)"/>
+  <rect x="38" y="42" width="1124" height="676" rx="26" fill="#07111A" fill-opacity=".92" stroke="url(#frame)" stroke-width="2.2" filter="url(#glow)">
+    <animate attributeName="stroke-opacity" values=".75;1;.78;1;.75" dur="4.8s" repeatCount="indefinite"/>
+  </rect>
   <rect x="58" y="62" width="1084" height="636" rx="20" fill="#0A0E17" fill-opacity=".7" stroke="#E6EDF3" stroke-opacity=".1"/>
 
   <g filter="url(#glow)">
@@ -68,7 +72,9 @@
 
   <g>
     <rect x="92" y="186" width="306" height="338" rx="44" fill="url(#mobileGlow)"/>
-    <path d="M130 187H360Q382 187 382 209V469Q382 494 356 507L282 544Q250 560 218 544L144 507Q116 493 116 469V209Q116 187 140 187Z" fill="#092225" fill-opacity=".76" stroke="#5CFFE9" stroke-width="4" filter="url(#glow)"/>
+    <path d="M130 187H360Q382 187 382 209V469Q382 494 356 507L282 544Q250 560 218 544L144 507Q116 493 116 469V209Q116 187 140 187Z" fill="#092225" fill-opacity=".76" stroke="#5CFFE9" stroke-width="4" filter="url(#glow)">
+      <animate attributeName="stroke-opacity" values=".72;1;.8;1;.72" dur="4.1s" repeatCount="indefinite"/>
+    </path>
     <rect x="136" y="204" width="226" height="64" rx="26" fill="#12373A" fill-opacity=".82" stroke="#5CFFE9" stroke-width="4"/>
     <text x="249" y="244" text-anchor="middle" fill="#B9FFF5" font-family="Consolas, 'JetBrains Mono', monospace" font-size="27" font-weight="700">MOBILE</text>
     <text x="249" y="324" text-anchor="middle" fill="#E6EDF3" font-family="Consolas, 'JetBrains Mono', monospace" font-size="21" font-weight="700">FLUTTER | DART</text>
@@ -83,7 +89,9 @@
 
   <g>
     <rect x="447" y="186" width="306" height="338" rx="44" fill="url(#webGlow)"/>
-    <path d="M482 187H718Q742 187 742 211V469Q742 494 716 507L632 548Q600 563 568 548L484 507Q458 494 458 469V211Q458 187 482 187Z" fill="#0B1B2A" fill-opacity=".78" stroke="#8DEBFF" stroke-width="4" filter="url(#glow)"/>
+    <path d="M482 187H718Q742 187 742 211V469Q742 494 716 507L632 548Q600 563 568 548L484 507Q458 494 458 469V211Q458 187 482 187Z" fill="#0B1B2A" fill-opacity=".78" stroke="#8DEBFF" stroke-width="4" filter="url(#glow)">
+      <animate attributeName="stroke-opacity" values=".8;1;.72;1;.8" dur="4.6s" repeatCount="indefinite"/>
+    </path>
     <rect x="478" y="204" width="244" height="64" rx="26" fill="#173342" fill-opacity=".82" stroke="url(#frame)" stroke-width="4"/>
     <text x="600" y="244" text-anchor="middle" fill="#B9F6FF" font-family="Consolas, 'JetBrains Mono', monospace" font-size="27" font-weight="700">WEB</text>
     <text x="600" y="324" text-anchor="middle" fill="#E6EDF3" font-family="Consolas, 'JetBrains Mono', monospace" font-size="21" font-weight="700">REACT | NODE |</text>
@@ -102,7 +110,9 @@
 
   <g>
     <rect x="802" y="186" width="306" height="338" rx="44" fill="url(#visionGlow)"/>
-    <path d="M838 187H1074Q1098 187 1098 211V469Q1098 494 1072 507L988 548Q956 563 924 548L840 507Q814 494 814 469V211Q814 187 838 187Z" fill="#2A0B24" fill-opacity=".76" stroke="#FF4FE3" stroke-width="4" filter="url(#glow)"/>
+    <path d="M838 187H1074Q1098 187 1098 211V469Q1098 494 1072 507L988 548Q956 563 924 548L840 507Q814 494 814 469V211Q814 187 838 187Z" fill="#2A0B24" fill-opacity=".76" stroke="#FF4FE3" stroke-width="4" filter="url(#glow)">
+      <animate attributeName="stroke-opacity" values=".72;1;.82;1;.72" dur="4.3s" repeatCount="indefinite"/>
+    </path>
     <rect x="835" y="204" width="244" height="64" rx="26" fill="#3A1233" fill-opacity=".82" stroke="#FF4FE3" stroke-width="4"/>
     <text x="957" y="244" text-anchor="middle" fill="#FFD2F7" font-family="Consolas, 'JetBrains Mono', monospace" font-size="27" font-weight="700">VISION</text>
     <text x="957" y="324" text-anchor="middle" fill="#E6EDF3" font-family="Consolas, 'JetBrains Mono', monospace" font-size="21" font-weight="700">OPENCV | OCR |</text>
@@ -115,41 +125,31 @@
       <path d="M173 64L122 34V94L173 124V64Z" fill="#FFA000"/>
       <path d="M47 178C23 164 28 132 58 124" stroke="#EE4C2C" stroke-width="8" stroke-linecap="round"/>
       <path d="M95 178C120 164 116 132 86 124" stroke="#EE4C2C" stroke-width="8" stroke-linecap="round"/>
-      <path d="M178 126C202 126 218 140 222 158C210 151 197 151 184 160C172 168 161 167 148 160C151 140 160 126 178 126Z" fill="#4285F4"/>
-      <path d="M184 160C197 151 210 151 222 158C223 177 209 194 188 198C177 187 169 175 184 160Z" fill="#34A853"/>
-      <path d="M148 160C161 167 172 168 184 160C169 175 177 187 188 198C164 200 145 185 142 164C143 162 145 161 148 160Z" fill="#FBBC05"/>
-      <path d="M142 164C145 185 164 200 188 198C168 211 137 199 132 173C134 168 137 165 142 164Z" fill="#EA4335"/>
     </g>
   </g>
 
   <g filter="url(#glow)">
     <rect x="110" y="606" width="980" height="108" rx="22" fill="#2B3038" fill-opacity=".9" stroke="#AAB2BD" stroke-width="3"/>
-    <g transform="translate(136 630)">
-      <rect x="0" y="0" width="45" height="50" rx="10" fill="#202631"/><text x="22.5" y="32" text-anchor="middle" fill="#52D9FF" font-family="Arial" font-size="19" font-weight="700">Fl</text>
-      <rect x="52" y="0" width="45" height="50" rx="10" fill="#202631"/><text x="74.5" y="32" text-anchor="middle" fill="#B85CFF" font-family="Arial" font-size="19" font-weight="700">Kt</text>
-      <rect x="104" y="0" width="45" height="50" rx="10" fill="#202631"/><text x="126.5" y="32" text-anchor="middle" fill="#61DAFB" font-family="Arial" font-size="19" font-weight="700">Re</text>
-      <rect x="156" y="0" width="45" height="50" rx="10" fill="#202631"/><text x="178.5" y="32" text-anchor="middle" fill="#8CC84B" font-family="Arial" font-size="19" font-weight="700">Nd</text>
-      <rect x="208" y="0" width="45" height="50" rx="10" fill="#202631"/><text x="230.5" y="32" text-anchor="middle" fill="#E6EDF3" font-family="Arial" font-size="18" font-weight="700">Ex</text>
-      <rect x="260" y="0" width="45" height="50" rx="10" fill="#202631"/><text x="282.5" y="32" text-anchor="middle" fill="#4DB33D" font-family="Arial" font-size="18" font-weight="700">Mg</text>
-      <rect x="312" y="0" width="45" height="50" rx="10" fill="#202631"/><text x="334.5" y="32" text-anchor="middle" fill="#FFD43B" font-family="Arial" font-size="18" font-weight="700">Py</text>
-      <rect x="364" y="0" width="45" height="50" rx="10" fill="#202631"/><text x="386.5" y="32" text-anchor="middle" fill="#2496ED" font-family="Arial" font-size="18" font-weight="700">Dk</text>
-      <rect x="416" y="0" width="45" height="50" rx="10" fill="#202631"/><text x="438.5" y="32" text-anchor="middle" fill="#A4C639" font-family="Arial" font-size="18" font-weight="700">An</text>
-      <rect x="468" y="0" width="45" height="50" rx="10" fill="#202631"/><text x="490.5" y="32" text-anchor="middle" fill="#FF8C00" font-family="Arial" font-size="18" font-weight="700">Tf</text>
-      <rect x="520" y="0" width="45" height="50" rx="10" fill="#202631"/><text x="542.5" y="32" text-anchor="middle" fill="#FFCA28" font-family="Arial" font-size="18" font-weight="700">Fb</text>
-      <rect x="572" y="0" width="45" height="50" rx="10" fill="#202631"/><text x="594.5" y="32" text-anchor="middle" fill="#FF6B35" font-family="Arial" font-size="17" font-weight="700">Git</text>
-      <rect x="624" y="0" width="45" height="50" rx="10" fill="#202631"/><text x="646.5" y="32" text-anchor="middle" fill="#F8FAFC" font-family="Arial" font-size="18" font-weight="700">Gh</text>
-      <rect x="676" y="0" width="45" height="50" rx="10" fill="#202631"/><text x="698.5" y="32" text-anchor="middle" fill="#2496ED" font-family="Arial" font-size="18" font-weight="700">Dc</text>
-      <rect x="728" y="0" width="45" height="50" rx="10" fill="#202631"/><text x="750.5" y="32" text-anchor="middle" fill="#F8FAFC" font-family="Arial" font-size="18" font-weight="700">Ln</text>
-      <rect x="780" y="0" width="45" height="50" rx="10" fill="#202631"/><text x="802.5" y="32" text-anchor="middle" fill="#FF61F6" font-family="Arial" font-size="18" font-weight="700">Fg</text>
-      <rect x="832" y="0" width="45" height="50" rx="10" fill="#202631"/><text x="854.5" y="32" text-anchor="middle" fill="#F8FAFC" font-family="Arial" font-size="18" font-weight="700">Ve</text>
-      <rect x="884" y="0" width="45" height="50" rx="10" fill="#202631"/><text x="906.5" y="32" text-anchor="middle" fill="#3AA7FF" font-family="Arial" font-size="18" font-weight="700">VS</text>
+    <g transform="translate(120 624)">
+      <rect x="0" y="0" width="50" height="56" rx="11" fill="#202631"/><text x="25" y="36" text-anchor="middle" fill="#52D9FF" font-family="Arial" font-size="21" font-weight="700">Fl</text>
+      <rect x="54" y="0" width="50" height="56" rx="11" fill="#202631"/><text x="79" y="36" text-anchor="middle" fill="#B85CFF" font-family="Arial" font-size="21" font-weight="700">Kt</text>
+      <rect x="108" y="0" width="50" height="56" rx="11" fill="#202631"/><text x="133" y="36" text-anchor="middle" fill="#61DAFB" font-family="Arial" font-size="21" font-weight="700">Re</text>
+      <rect x="162" y="0" width="50" height="56" rx="11" fill="#202631"/><text x="187" y="36" text-anchor="middle" fill="#8CC84B" font-family="Arial" font-size="21" font-weight="700">Nd</text>
+      <rect x="216" y="0" width="50" height="56" rx="11" fill="#202631"/><text x="241" y="36" text-anchor="middle" fill="#E6EDF3" font-family="Arial" font-size="20" font-weight="700">Ex</text>
+      <rect x="270" y="0" width="50" height="56" rx="11" fill="#202631"/><text x="295" y="36" text-anchor="middle" fill="#4DB33D" font-family="Arial" font-size="20" font-weight="700">Mg</text>
+      <rect x="324" y="0" width="50" height="56" rx="11" fill="#202631"/><text x="349" y="36" text-anchor="middle" fill="#FFD43B" font-family="Arial" font-size="20" font-weight="700">Py</text>
+      <rect x="378" y="0" width="50" height="56" rx="11" fill="#202631"/><text x="403" y="36" text-anchor="middle" fill="#2496ED" font-family="Arial" font-size="20" font-weight="700">Dk</text>
+      <rect x="432" y="0" width="50" height="56" rx="11" fill="#202631"/><text x="457" y="36" text-anchor="middle" fill="#A4C639" font-family="Arial" font-size="20" font-weight="700">An</text>
+      <rect x="486" y="0" width="50" height="56" rx="11" fill="#202631"/><text x="511" y="36" text-anchor="middle" fill="#FF8C00" font-family="Arial" font-size="20" font-weight="700">Tf</text>
+      <rect x="540" y="0" width="50" height="56" rx="11" fill="#202631"/><text x="565" y="36" text-anchor="middle" fill="#FFCA28" font-family="Arial" font-size="20" font-weight="700">Fb</text>
+      <rect x="594" y="0" width="50" height="56" rx="11" fill="#202631"/><text x="619" y="36" text-anchor="middle" fill="#FF6B35" font-family="Arial" font-size="19" font-weight="700">Git</text>
+      <rect x="648" y="0" width="50" height="56" rx="11" fill="#202631"/><text x="673" y="36" text-anchor="middle" fill="#F8FAFC" font-family="Arial" font-size="20" font-weight="700">Gh</text>
+      <rect x="702" y="0" width="50" height="56" rx="11" fill="#202631"/><text x="727" y="36" text-anchor="middle" fill="#2496ED" font-family="Arial" font-size="20" font-weight="700">Dc</text>
+      <rect x="756" y="0" width="50" height="56" rx="11" fill="#202631"/><text x="781" y="36" text-anchor="middle" fill="#F8FAFC" font-family="Arial" font-size="20" font-weight="700">Ln</text>
+      <rect x="810" y="0" width="50" height="56" rx="11" fill="#202631"/><text x="835" y="36" text-anchor="middle" fill="#FF61F6" font-family="Arial" font-size="20" font-weight="700">Fg</text>
+      <rect x="864" y="0" width="50" height="56" rx="11" fill="#202631"/><text x="889" y="36" text-anchor="middle" fill="#F8FAFC" font-family="Arial" font-size="20" font-weight="700">Ve</text>
+      <rect x="918" y="0" width="50" height="56" rx="11" fill="#202631"/><text x="943" y="36" text-anchor="middle" fill="#3AA7FF" font-family="Arial" font-size="20" font-weight="700">VS</text>
     </g>
     <text x="600" y="700" text-anchor="middle" fill="#E6EDF3" font-family="Consolas, 'JetBrains Mono', monospace" font-size="16">DEVELOPMENT TOOLS &amp; WORKFLOW</text>
   </g>
-
-  <g opacity=".9">
-    <rect x="1080" y="638" width="42" height="42" rx="7" stroke="#E6EDF3" stroke-opacity=".55" stroke-width="2"/>
-    <rect x="1068" y="650" width="42" height="42" rx="7" stroke="#E6EDF3" stroke-opacity=".35" stroke-width="2"/>
-  </g>
-  <path d="M1076 574L1091 607L1125 622L1091 637L1076 670L1061 637L1027 622L1061 607L1076 574Z" fill="#E6EDF3" fill-opacity=".35"/>
 </svg>
