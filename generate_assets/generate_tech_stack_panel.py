@@ -243,10 +243,10 @@ def draw_panel_frame(img: Image.Image, pulse: float):
     draw = ImageDraw.Draw(img)
     frame = Image.new("RGBA", (SW, SH), (0, 0, 0, 0))
     fd = ImageDraw.Draw(frame)
-    fd.rounded_rectangle((sc(10), sc(8), sc(1190), sc(752)), radius=sc(22), outline=(*CYAN, int(68 + 36 * pulse)), width=sc(2))
-    fd.rounded_rectangle((sc(14), sc(12), sc(1186), sc(748)), radius=sc(20), outline=(*MAGENTA, int(34 + 28 * pulse)), width=sc(1))
-    img.alpha_composite(frame.filter(ImageFilter.GaussianBlur(sc(5))))
-    draw.rounded_rectangle((sc(10), sc(8), sc(1190), sc(752)), radius=sc(22), outline=(*CYAN, int(105 + 60 * pulse)), width=sc(2))
+    fd.rounded_rectangle((sc(10), sc(8), sc(1190), sc(752)), radius=sc(22), outline=(*CYAN, int(78 + 64 * pulse)), width=sc(3))
+    fd.rounded_rectangle((sc(14), sc(12), sc(1186), sc(748)), radius=sc(20), outline=(*MAGENTA, int(44 + 52 * pulse)), width=sc(2))
+    img.alpha_composite(frame.filter(ImageFilter.GaussianBlur(sc(6 + 4 * pulse))))
+    draw.rounded_rectangle((sc(10), sc(8), sc(1190), sc(752)), radius=sc(22), outline=(*CYAN, int(118 + 72 * pulse)), width=sc(2))
 
 
 def draw_frame(frame_idx: int, total: int) -> Image.Image:

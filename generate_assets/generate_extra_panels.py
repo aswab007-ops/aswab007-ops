@@ -36,7 +36,10 @@ def build_signal_panel() -> str:
   <circle cx="250" cy="180" r="260" fill="#00F6FF" opacity=".13" filter="url(#soft)"/>
   <circle cx="930" cy="170" r="250" fill="#FF2ED1" opacity=".12" filter="url(#soft)"/>
   <rect width="1200" height="360" fill="url(#grid)" opacity=".4"/>
-  <rect x="28" y="22" width="1144" height="316" rx="28" fill="#0B111B" stroke="url(#frame)" stroke-width="2.5" filter="url(#glow)"/>
+  <rect x="28" y="22" width="1144" height="316" rx="28" fill="none" stroke="url(#frame)" stroke-width="5" filter="url(#glow)" opacity=".45">
+    <animate attributeName="opacity" values=".45;1;.45" dur="3.2s" calcMode="spline" keyTimes="0;.5;1" keySplines=".42 0 .58 1;.42 0 .58 1" repeatCount="indefinite"/>
+  </rect>
+  <rect x="28" y="22" width="1144" height="316" rx="28" fill="#0B111B" stroke="url(#frame)" stroke-width="2.5"/>
   <rect x="52" y="46" width="1096" height="268" rx="18" fill="#070B11" stroke="#607080" stroke-width="1" opacity=".9"/>
   <rect x="424" y="34" width="352" height="54" rx="27" fill="#07151B" stroke="#00F6FF" stroke-width="2" filter="url(#glow)"/>
   <text x="600" y="69" text-anchor="middle" font-family="Consolas, 'JetBrains Mono', monospace" font-size="25" font-weight="700" fill="#9DFBFF">&gt; build_signal --now</text>
@@ -108,6 +111,9 @@ def contact_panel() -> str:
   </g>
 
   <rect x="88" y="50" width="1024" height="206" rx="24" fill="url(#metal)" stroke="#0B0D10" stroke-width="8"/>
+  <rect x="102" y="64" width="996" height="178" rx="18" fill="none" stroke="url(#edge)" stroke-width="4" filter="url(#glow)" opacity=".42">
+    <animate attributeName="opacity" values=".42;.95;.42" dur="3.7s" begin=".45s" calcMode="spline" keyTimes="0;.5;1" keySplines=".42 0 .58 1;.42 0 .58 1" repeatCount="indefinite"/>
+  </rect>
   <rect x="102" y="64" width="996" height="178" rx="18" fill="#061018" stroke="url(#edge)" stroke-width="1.5"/>
   <rect x="123" y="84" width="954" height="134" rx="12" fill="#060B0F" stroke="#324452"/>
   <g fill="#071018" stroke="#A0A8B0" stroke-width="1.2">
@@ -123,8 +129,6 @@ def contact_panel() -> str:
     <path d="M380 143C426 143 430 143 462 143" stroke="#9DFBFF" stroke-width="14" opacity=".22"/>
     <path d="M380 132C425 132 430 132 462 132M380 154C425 154 430 154 462 154M754 132C795 132 800 132 822 132M754 154C795 154 800 154 822 154" stroke="#7EF7FF" stroke-width="3"/>
     <path d="M754 143C793 143 801 143 822 143" stroke="#FF73E6" stroke-width="10" opacity=".22"/>
-    <path d="M228 206C360 258 520 246 600 232C760 206 900 246 1015 206" stroke="#7EF7FF" stroke-width="7" opacity=".22"/>
-    <path d="M228 206C360 258 520 246 600 232C760 206 900 246 1015 206" stroke="#00F6FF" stroke-width="2" stroke-dasharray="12 10"/>
   </g>
 
   <g font-family="Consolas, 'JetBrains Mono', monospace">
@@ -145,7 +149,8 @@ def contact_panel() -> str:
     <text x="534" y="153" font-size="12" fill="#D2D8DF">aswabkhalil</text>
     <text x="534" y="169" font-size="12" fill="#D2D8DF">Connection + answabs</text>
 
-    <text x="932" y="98" text-anchor="middle" font-size="14" font-weight="700" fill="#DDE8EF">GITHUB</text>
+    <rect x="889" y="80" width="86" height="22" rx="11" fill="#07131A" stroke="#00F6FF" stroke-width="1" opacity=".9"/>
+    <text x="932" y="96" text-anchor="middle" font-size="15" font-weight="800" fill="#EAFBFF">GITHUB</text>
     <path d="M890 94H974L1034 143L974 196H890L830 143Z" fill="#091923" stroke="#00F6FF" stroke-width="3" filter="url(#glow)"/>
     <path d="M904 111H960L1001 143L960 178H904L863 143Z" fill="#10202A" stroke="#425968" stroke-width="1"/>
     <circle cx="932" cy="141" r="30" fill="#93FFFF"/>
@@ -153,14 +158,6 @@ def contact_panel() -> str:
     <circle cx="921" cy="142" r="5" fill="#063B46"/><circle cx="943" cy="142" r="5" fill="#063B46"/>
     <path d="M922 158C928 162 936 162 942 158" stroke="#063B46" stroke-width="3" stroke-linecap="round"/>
     <text x="932" y="188" text-anchor="middle" font-size="13" font-weight="800" fill="#DFFFFF">ASWAB007-OPS</text>
-  </g>
-
-  <g font-family="Consolas, 'JetBrains Mono', monospace">
-    <rect x="560" y="224" width="28" height="28" rx="5" fill="#121820" stroke="#A8B3BE"/>
-    <rect x="568" y="230" width="12" height="12" rx="2" stroke="#DDE8EF" stroke-width="1.4"/>
-    <rect x="574" y="224" width="12" height="12" rx="2" stroke="#DDE8EF" stroke-width="1.4"/>
-    <rect x="594" y="224" width="96" height="28" rx="8" fill="#121820" stroke="#A8B3BE"/>
-    <text x="642" y="243" text-anchor="middle" font-size="13" font-weight="700" fill="#DDE8EF">COPY_DATA</text>
   </g>
 </svg>
 '''
