@@ -1,0 +1,60 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Build signal panel showing product engineering focus">
+  <defs>
+    <linearGradient id="frame" x1="60" y1="30" x2="1140" y2="330" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00F6FF"/><stop offset=".52" stop-color="#7CA8FF"/><stop offset="1" stop-color="#FF2ED1"/>
+    </linearGradient>
+    <linearGradient id="cyanMag" x1="160" y1="180" x2="1040" y2="180" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00F6FF"/><stop offset=".5" stop-color="#72C7FF"/><stop offset="1" stop-color="#FF2ED1"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-40%" width="160%" height="180%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <pattern id="grid" width="46" height="46" patternUnits="userSpaceOnUse">
+      <path d="M0 23H46M23 0V46" stroke="#123240" stroke-width="1" opacity=".35"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="360" fill="#080D14"/>
+  <circle cx="250" cy="180" r="260" fill="#00F6FF" opacity=".13" filter="url(#soft)"/>
+  <circle cx="930" cy="170" r="250" fill="#FF2ED1" opacity=".12" filter="url(#soft)"/>
+  <rect width="1200" height="360" fill="url(#grid)" opacity=".4"/>
+  <rect x="28" y="22" width="1144" height="316" rx="28" fill="#0B111B" stroke="url(#frame)" stroke-width="2.5" filter="url(#glow)"/>
+  <rect x="52" y="46" width="1096" height="268" rx="18" fill="#070B11" stroke="#607080" stroke-width="1" opacity=".9"/>
+  <rect x="424" y="34" width="352" height="54" rx="27" fill="#07151B" stroke="#00F6FF" stroke-width="2" filter="url(#glow)"/>
+  <text x="600" y="69" text-anchor="middle" font-family="Consolas, 'JetBrains Mono', monospace" font-size="25" font-weight="700" fill="#9DFBFF">&gt; build_signal --now</text>
+
+  <path d="M178 184H1022" stroke="url(#cyanMag)" stroke-width="16" stroke-linecap="round" opacity=".18" filter="url(#glow)"/>
+  <path d="M178 184H1022" stroke="url(#cyanMag)" stroke-width="3" stroke-linecap="round" stroke-dasharray="16 12" opacity=".95"/>
+
+  <g font-family="Consolas, 'JetBrains Mono', monospace">
+    <g transform="translate(106 114)">
+      <rect width="246" height="142" rx="18" fill="#0A1720" stroke="#00F6FF" stroke-width="2" filter="url(#glow)"/>
+      <text x="123" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#9DFBFF">PRODUCT MODE</text>
+      <path d="M78 72H168M78 92H142M78 112H184" stroke="#DFFBFF" stroke-width="7" stroke-linecap="round" opacity=".9"/>
+      <circle cx="58" cy="72" r="8" fill="#00F6FF"/><circle cx="58" cy="92" r="8" fill="#FF2ED1"/><circle cx="58" cy="112" r="8" fill="#87F7FF"/>
+      <text x="123" y="132" text-anchor="middle" font-size="14" fill="#B8C7D4">IDEATE -> BUILD -> SHIP</text>
+    </g>
+    <g transform="translate(477 104)">
+      <rect width="246" height="162" rx="20" fill="#11131F" stroke="#7CA8FF" stroke-width="2" filter="url(#glow)"/>
+      <text x="123" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#B9D8FF">CURRENT STACK</text>
+      <text x="123" y="78" text-anchor="middle" font-size="32" font-weight="800" fill="#FFFFFF">FLUTTER</text>
+      <text x="123" y="112" text-anchor="middle" font-size="25" font-weight="800" fill="#00F6FF">MERN</text>
+      <text x="123" y="142" text-anchor="middle" font-size="18" font-weight="700" fill="#FF9AF0">VISION + AI</text>
+    </g>
+    <g transform="translate(848 114)">
+      <rect width="246" height="142" rx="18" fill="#1A0D1B" stroke="#FF2ED1" stroke-width="2" filter="url(#glow)"/>
+      <text x="123" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#FFC5F4">OUTPUT</text>
+      <path d="M72 82L122 54L174 82V130H72V82Z" fill="#111923" stroke="#EAFBFF" stroke-width="3"/>
+      <path d="M122 54V101M72 82L122 111L174 82" stroke="#00F6FF" stroke-width="2" opacity=".8"/>
+      <text x="123" y="132" text-anchor="middle" font-size="14" fill="#DCE8F2">REAL PRODUCTS, NOT DEMOS</text>
+    </g>
+  </g>
+
+  <g font-family="Consolas, 'JetBrains Mono', monospace" font-size="15" fill="#DCE8F2">
+    <rect x="236" y="286" width="728" height="34" rx="17" fill="#08131A" stroke="#324A5A"/>
+    <text x="600" y="308" text-anchor="middle">status: building mobile, web, and intelligent systems that survive real users</text>
+  </g>
+</svg>

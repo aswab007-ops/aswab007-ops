@@ -48,98 +48,28 @@
 
 <img src="./assets/neon-divider.svg" width="100%" alt="Neon cyan magenta divider" />
 
-<table>
-  <tr>
-    <td>
-
-### <code>&gt; github_stats --scan</code>
-
 <div align="center">
 
-  <img height="178" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=aswab007-ops&show_icons=true&theme=dark&hide_border=false&border_color=00F6FF&border_radius=18&bg_color=0D1117&title_color=00F6FF&text_color=E6EDF3&icon_color=FF2ED1&hide_rank=true" alt="GitHub stats" />
-  <img height="178" src="https://github-readme-streak-stats.herokuapp.com?user=aswab007-ops&theme=dark&hide_border=false&border=00F6FF&background=0D1117&ring=FF2ED1&fire=FF2ED1&currStreakLabel=00F6FF&sideLabels=E6EDF3&currStreakNum=E6EDF3&sideNums=E6EDF3&dates=8B96A5" alt="GitHub streak stats" />
-
-  <br /><br />
-
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=aswab007-ops&theme=react-dark&hide_border=false&radius=18&area=true&bg_color=0D1117&color=E6EDF3&line=00F6FF&point=FF2ED1&area_color=FF2ED1&border_color=00F6FF" width="96%" alt="GitHub activity graph" />
+  <img src="./assets/build-signal-panel.svg" width="100%" alt="Build signal panel showing product engineering focus, current stack, and product output" />
 
 </div>
-
-    </td>
-  </tr>
-</table>
 
 <img src="./assets/neon-divider.svg" width="100%" alt="Neon cyan magenta divider" />
 
-<table>
-  <tr>
-    <td>
-
-### <code>&gt; project_log --featured</code>
-
 <div align="center">
 
-<a href="https://github.com/aswab007-ops/RozGo">
-  <img src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/pin/?username=aswab007-ops&repo=RozGo&theme=dark&hide_border=false&border_color=00F6FF&border_radius=18&bg_color=0D1117&title_color=00F6FF&text_color=E6EDF3&icon_color=FF2ED1" alt="Project log 01 RozGo repository card" />
-</a>
+  <img src="./assets/contact-panel.svg" width="100%" alt="Connect panel with email LinkedIn and GitHub contact modules" />
 
-<a href="https://github.com/aswab007-ops/cameramodel">
-  <img src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/pin/?username=aswab007-ops&repo=cameramodel&theme=dark&hide_border=false&border_color=FF2ED1&border_radius=18&bg_color=0D1117&title_color=FF2ED1&text_color=E6EDF3&icon_color=00F6FF" alt="Project log 02 camera model repository card" />
-</a>
-
-</div>
-
-<br />
-
-<table>
-  <tr>
-    <td width="33%">
-      <code>&gt; project_log/01</code><br />
-      <strong>RozGo</strong><br />
-      MERN gig-income tracker with JWT auth, Cloudinary uploads, analytics, PDF export, and admin review flows.
-    </td>
-    <td width="33%">
-      <code>&gt; project_log/02</code><br />
-      <strong>Camera Model</strong><br />
-      Computer vision work around camera geometry, epipolar constraints, and 3D reconstruction foundations.
-    </td>
-    <td width="33%">
-      <code>&gt; project_log/03</code><br />
-      <strong>Vehicle Inspection Mobile App</strong><br />
-      Flutter inspection workflow with camera capture, damage mapping, offline-first storage, and sync-ready submission.
-    </td>
-  </tr>
-</table>
-
-    </td>
-  </tr>
-</table>
-
-<img src="./assets/neon-divider.svg" width="100%" alt="Neon cyan magenta divider" />
-
-<table>
-  <tr>
-    <td>
-
-### <code>&gt; connect --open-channel</code>
-
-<div align="center">
-
-  <a href="mailto:aswabkhalil@gmail.com">
-    <img src="https://img.shields.io/badge/Email-aswabkhalil%40gmail.com-0D1117?style=for-the-badge&logo=gmail&logoColor=00F6FF&labelColor=0D1117&color=0D1117" alt="Email Muhammad Aswab Khalil" />
-  </a>
-  <a href="https://www.linkedin.com/in/muhammad-aswab-khalil-b578a235a/">
-    <img src="https://img.shields.io/badge/LinkedIn-Muhammad%20Aswab%20Khalil-0D1117?style=for-the-badge&logo=linkedin&logoColor=00F6FF&labelColor=0D1117&color=0D1117" alt="LinkedIn Muhammad Aswab Khalil" />
-  </a>
-  <a href="https://github.com/aswab007-ops">
-    <img src="https://img.shields.io/badge/GitHub-aswab007--ops-0D1117?style=for-the-badge&logo=github&logoColor=00F6FF&labelColor=0D1117&color=0D1117" alt="GitHub aswab007-ops" />
-  </a>
+  <br />
+  <sub>
+    <a href="mailto:aswabkhalil@gmail.com"><code>email</code></a>
+    &nbsp;|&nbsp;
+    <a href="https://www.linkedin.com/in/muhammad-aswab-khalil-b578a235a/"><code>linkedin</code></a>
+    &nbsp;|&nbsp;
+    <a href="https://github.com/aswab007-ops"><code>github</code></a>
+  </sub>
 
 </div>
-
-    </td>
-  </tr>
-</table>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&height=3&color=0:00F6FF,50:7C3AED,100:FF2ED1" width="100%" alt="Thin neon footer divider" />
 
